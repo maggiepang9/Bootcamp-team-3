@@ -1,0 +1,7 @@
+﻿NAME,WEB_URL,GIS_ID,OBJECTID,SE_ANNO_CAD_DATA,CREATOR,CREATED,EDITOR,EDITED,GLOBALID,SHAPELEN
+red,http://wmata.com/rail/maps/map.cfm,MetroFullLn_1,1,,,,,,{26C33DA1-D075-4B3C-834A-90AA7F103704},0
+yellow,http://wmata.com/rail/maps/map.cfm,MetroFullLn_4,2,,,,JLAY,2024/03/12 20:23:51+00,{2E71B716-D790-4056-907E-91C147B4EA54},0
+green,http://wmata.com/rail/maps/map.cfm,MetroFullLn_3,3,,,,,,{4278751E-3012-4A00-A403-E1C04A681FBF},0
+orange,http://wmata.com/rail/maps/map.cfm,MetroFullLn_2,4,,,,,,{086D5EF7-0BC0-4D6D-BEF0-F2698449BF15},0
+silver,http://wmata.com/rail/maps/map.cfm,MetroFullLn_6,5,,,,JLAY,2022/11/30 20:26:59+00,{80E44603-0BAF-4818-AE6C-AD91D7846D63},0
+blue,http://wmata.com/rail/maps/map.cfm,MetroFullLn_5,6,,,,,,{9A2E651C-96F1-4186-9453-53813419F2C7},0
