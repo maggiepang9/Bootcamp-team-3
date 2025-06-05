@@ -1,0 +1,31 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+library(tidyverse)
+library(tmap)
+library(sf)
+library(sp)
+library(tigris)
+options(tigris_use_cache = T)
+```
+
+
+
+```{r}
+alc = read_csv("Alcohol_License_Business_Locations.csv", show_col_types = F)
+head(alc)
+```
+
+
+```{r}
+dc_tracts = tracts(state = "DC", year = 2022)
+ggplot(data = NULL) + 
+  geom_sf(data = dc_tracts, aes(geometry = geometry, fill = NULL)) + 
+  geom_point(data = alc, aes(x = LONGITUDE, y = LATITUDE), alpha = 0.2, col = viridis::viridis(1))
+```
+
+
