@@ -1,0 +1,28 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+library(tidyverse)
+library(tmap)
+library(sf)
+library(sp)
+library(tigris)
+options(tigris_use_cache = T)
+```
+
+
+```{r, warning = F}
+file_list = list.files(".", pattern = ".csv", full.names = T)
+data_list <- set_names(file_list, basename(file_list)) %>%
+  map(read_csv)
+```
+
+```{r}
+column_check_lat <- map_lgl(data_list, ~ "LATITUDE" %in% names(.x))
+column_check_lon <- map_lgl(data_list, ~ "LONGITUDE" %in% names(.x))
+tibble(file = names(data_list), has_LATITUDE = column_check_lat, has_LONGITUDE = column_check_lon)
+```
+
