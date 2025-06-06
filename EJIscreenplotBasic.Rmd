@@ -24,7 +24,7 @@ ejscreen_data <- read_csv(file_path)
 dc_data <- ejscreen_data %>%
   filter(str_starts(ID, "11")) %>%
   transmute(
-    GEOID = ID,
+    GEOID = as.character(ID),
     pct_low_income = percent_rank(LOWINCPCT), # percent_rank is for creating percentiles
     asthma_index = percent_rank(P_DEMOGIDX_2),
     unemployment_rate = percent_rank(UNEMPPCT),
