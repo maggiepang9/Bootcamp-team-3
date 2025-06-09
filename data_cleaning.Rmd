@@ -367,10 +367,10 @@ for(i in 1:length(data_list_proximity)){
 }
 
 ## Join Intersect Data
-for(i in 1:length(data_list_intersect)){
+for(i in 1:(length(data_list_intersect) - 2)){
   new_data = data_list_intersect[[i]] %>%
               st_drop_geometry() %>%
-              select(GEOID, contains("TRACT"))
+              select(GEOID, contains("TRACT_"))
   data_combined = left_join(data_combined, new_data)
 }
 
