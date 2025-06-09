@@ -13,19 +13,63 @@ library(tigris)
 options(tigris_use_cache = T)
 ```
 
-
-
 ```{r}
 alc = read_csv("Alcohol_License_Business_Locations.csv", show_col_types = F)
 head(alc)
+grocery = read_csv("Grocery_Store_Locations.csv", show_col_type = F)
+head(grocery)
+corner = read_csv("Healthy_Corner_Stores.csv", show_col_types = F)
+head(corner)
 ```
 
 
 ```{r}
 dc_tracts = tracts(state = "DC", year = 2022)
+
 ggplot(data = NULL) + 
   geom_sf(data = dc_tracts, aes(geometry = geometry, fill = NULL)) + 
-  geom_point(data = alc, aes(x = LONGITUDE, y = LATITUDE), alpha = 0.2, col = viridis::viridis(1))
+  geom_point(data = alc, aes(x = LONGITUDE, y = LATITUDE, col = "alcohol", size = TOTAL_CAPACITY), alpha = 0.4)
+  # geom_point(data = corner, aes(x = LONGITUDE, y = LATITUDE, col = "corner"), alpha = 0.4)
+```
+
+# Point-Areal Intersect
+
+```{r}
+alc_clean = drop_na(alc, "X")
+alc_sf = st_as_sf(alc_clean, coords = c("LONGITUDE", "LATITUDE"), crs = "NAD83")
+
+alc_joined = st_join(alc_sf, dc_tracts, join = st_within)
+
+aggregated <- alc_joined %>%
+  st_drop_geometry() %>%
+  group_by(GEOID) %>%
+  summarise(total_capacity = sum(TOTAL_CAPACITY, na.rm = TRUE))
+
+# Join result back to polygon geometry
+alc_areal <- left_join(dc_tracts, aggregated, by = "GEOID")
+```
+
+```{r}
+alc_areal$total_capacity = percent_rank(alc_areal$total_capacity)
+
+ggplot(data = alc_areal) + 
+  geom_sf(aes(geometry = geometry, fill = total_capacity)) +
+  scale_fill_viridis_c()
+
+```
+
+# Point to Raster Conversion
+
+```{r}
+alc_clean = drop_na(alc, "X")
+alc_sf = st_as_sf(alc_clean, coords = c("LONGITUDE", "LATITUDE"), crs = "NAD83")
+alc_coords = st_coordinates(alc_sf)
+alc_sp = as(alc_sf, "Spatial")
+```
+
+
+```{r}
+alc_intersect = st_intersection(dc_tracts, alc_sf)
 ```
 
 

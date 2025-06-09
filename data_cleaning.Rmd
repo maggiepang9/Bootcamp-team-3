@@ -263,7 +263,7 @@ get_proximity = function(df_list, tracts) {
 ```{r}
 data_list_within = get_within(data_list[c(1,4,5,7,8,10,12:15,17)], dc_tracts)
 data_list_proximity = get_proximity(data_list[c(1,4,5,7,8,10,12:15,17)], dc_tracts)
-data_list_intersect = get_intersect(data_list[c(3, 6, 9, 11, 16)], dc_tracts)
+data_list_intersect = get_intersect(data_list[c(3, 6, 9, 16)], dc_tracts)
 # data_list_overlap = get_overlaps(data_list[c(3, 6, 9, 11, 16)], dc_tracts)
 # data_list_intersection = get_intersection(data_list[c(3, 6, 9, 11, 16)], dc_tracts)
 ```
@@ -367,19 +367,24 @@ for(i in 1:length(data_list_proximity)){
 }
 
 ## Join Intersect Data
-for(i in 1:(length(data_list_intersect) - 2)){
+for(i in 1:(length(data_list_intersect))){
   new_data = data_list_intersect[[i]] %>%
               st_drop_geometry() %>%
               select(GEOID, contains("TRACT_"))
   data_combined = left_join(data_combined, new_data)
 }
 
-## Join Intersect Data
-# data_combined = left_join(data_combined, flood_aggregated)
+## Fill in Zeros and convert to percentile
+data_final = data_combined %>%
+  mutate(across(everything(), ~ replace_na(., 0))) %>%
+  select(-c(5, 6)) %>%
+  mutate(across(c(TotalPopulation:CASTHMA, TRACT_COUNT_Alcohol_Li:TRACT_COUNT_Public_House), percent_rank))
 
+# data_final = data_final %>%
+#   left_join(dc_tracts %>% select(GEOID, geometry), by = "GEOID")
 ```
 
 ```{r}
-
-
+# st_write(data_final, "Final_Cleaned_Data.shp")
+write_csv(data_final, "Final_Cleaned_Data.csv")
 ```
