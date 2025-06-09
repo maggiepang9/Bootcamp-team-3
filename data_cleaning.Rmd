@@ -8,6 +8,8 @@ library(readr)
 library(tidyverse)
 library(sf)
 library(sp)
+library(units)
+library(nngeo)
 library(tigris)
 options(tigris_use_cache = T)
 ```
@@ -49,6 +51,7 @@ dc_tracts = tracts(state = "DC", year = 2022, cb = T)
   # out <- df_areal
 ```
 
+
 ```{r}
 get_within = function(df_list, tracts){
   
@@ -79,6 +82,7 @@ get_within = function(df_list, tracts){
 }
 ```
 
+
 ```{r}
 get_intersect = function(df_list, tracts){
   
@@ -97,10 +101,8 @@ get_intersect = function(df_list, tracts){
   }
   return(df_list)
 }
-```
 
-```{r}
-get_intersection = function(df_list, tracts){
+get_overlaps = function(df_list, tracts){
   
   df_names = names(df_list)
   crs_transform = st_crs(tracts)
@@ -111,13 +113,7 @@ get_intersection = function(df_list, tracts){
     df_clean = drop_na(df, "geometry")
     
     try({
-    df_joined = st_join(df_clean, tracts, join = st_intersection)
-    tracts$orig_area = st_area(tracts)
-    df_joined$int_area = st_area(df_joined)
-    df_joined = df_joined %>% 
-      left_join(st_drop_geometry(dc_tracts)[, c("GEOID", "orig_area")], by = "GEOID") 
-    
-    df_joined$PROP_AERA = as.numeric(df_joined$int_area / df_joined$orig_area)
+    df_joined = st_join(df_clean, tracts, join = st_overlaps)
     })
     df_list[[i]] <- df_joined
   }
@@ -125,10 +121,151 @@ get_intersection = function(df_list, tracts){
 }
 ```
 
+
+```{r}
+# get_intersection = function(df_list, tracts){
+#   
+#   df_names = names(df_list)
+#   crs_transform = st_crs(tracts)
+#   
+#   for(i in 1:length(df_list)) {
+#     df = st_make_valid(df_list[[i]])
+#     df = st_transform(df, crs = crs_transform)
+#     df_clean = drop_na(df, "geometry")
+#     
+#     try({
+#       
+#     tracts$orig_area = st_area(tracts)
+#     df_joined$int_area = st_area(df_joined)
+#     df_joined = df_joined %>% 
+#       left_join(st_drop_geometry(dc_tracts)[, c("GEOID", "orig_area")], by = "GEOID") 
+#     
+#     df_joined$PROP_AERA = as.numeric(df_joined$int_area / df_joined$orig_area)
+#     })
+#     df_list[[i]] <- df_joined
+#   }
+#   return(df_list)
+# }
+# 
+# library(sf)
+# library(dplyr)
+# 
+# get_intersection <- function(df_list, tracts) {
+#   
+#   df_names <- names(df_list)
+#   crs_transform <- st_crs(tracts)
+#   
+#   tracts <- st_make_valid(tracts)
+#   tracts <- st_transform(tracts, crs = crs_transform)
+#   tracts$orig_area <- st_area(tracts)
+# 
+#   for (i in seq_along(df_list)) {
+#     df <- st_make_valid(df_list[[i]])
+#     df <- st_transform(df, crs = crs_transform)
+#     df_clean <- df %>% filter(!st_is_empty(geometry))
+# 
+#     df_joined <- tryCatch({
+#       intersected <- st_intersection(df_clean, tracts)
+# 
+#       # If intersection result is empty, return empty sf with expected columns
+#       if (nrow(intersected) == 0) {
+#         message(paste("No intersection found for:", df_names[i]))
+#         return(df_clean[0, ])  # empty with same structure
+#       }
+# 
+#       intersected$int_area <- st_area(intersected)
+# 
+#       # Join back original tract area by GEOID
+#       intersected <- intersected %>%
+#         left_join(st_drop_geometry(tracts)[, c("GEOID", "orig_area")], by = "GEOID") %>%
+#         # mutate(PROP_AREA = as.numeric(int_area / orig_area)) %>%
+#         mutate(PROP_AREA = ifelse(!is.na(orig_area), as.numeric(int_area / orig_area), NA_real_))
+# 
+#       intersected
+#     }, error = function(e) {
+#       message(paste("Error on dataset:", df_names[i], "-", e$message))
+#       return(df_clean[0, ])  # return empty sf object on failure
+#     })
+# 
+#     df_list[[i]] <- df_joined
+#   }
+# 
+#   return(df_list)
+# }
+```
+
+
+```{r}
+get_proximity = function(df_list, tracts) {
+  df_names <- names(df_list)
+  crs_transform <- st_crs(tracts)
+  
+  tracts <- st_make_valid(tracts)
+  tracts <- st_transform(tracts, crs = crs_transform)
+  tracts$orig_area <- st_area(tracts)
+  
+  for(i in 1:length(df_list)) {
+    df <- st_make_valid(df_list[[i]])
+    df <- st_transform(df, crs = crs_transform)
+    df_clean <- df %>% filter(!st_is_empty(geometry))
+    
+    # if (!all(c("X", "Y") %in% colnames(df_clean))) {
+    #   stop("DataFrame CSV must include 'X' and 'Y' columns with longitude and latitude.")
+    # }
+
+    # Project blocks and compute centroids
+    tracts_centroid <- st_centroid(tracts)
+    
+    nn_result <- st_nn(tracts_centroid, df_clean, k = 1, returnDist = TRUE)
+    distances <- sapply(nn_result$dist, function(x) if (length(x) > 0) x else NA)
+    tracts_centroid = tracts_centroid %>%
+      mutate(!!paste("dist_to_m",
+                    substr(df_names[i], start = 1, stop = 10),
+                    sep = "_") := distances)
+    # tracts_centroid$dist_to_m <- set_units(distances, "m")
+    
+    # Create block-level data with numeric distance and percentile
+    tracts_output <- tracts_centroid %>%
+      st_drop_geometry() %>%
+      mutate(
+        !!paste("dist_m",
+                    substr(df_names[i], start = 1, stop = 10),
+                    sep = "_") := as.numeric(!!paste("dist_to_m",
+                    substr(df_names[i], start = 1, stop = 10),
+                    sep = "_")),
+        !!paste("dist_percentile",
+                    substr(df_names[i], start = 1, stop = 10),
+                    sep = "_") := percent_rank(!!paste("dist_m",
+                    substr(df_names[i], start = 1, stop = 10),
+                    sep = "_")) * 100
+      )
+    
+    # Compute tract-level population-weighted averages
+    # tract_summary <- tracts_output %>%
+    #   filter(!is.na(!!paste("dist_m",
+    #                 substr(df_names[i], start = 1, stop = 10),
+    #                 sep = "_")) & !is.na(POP)) %>%
+      # group_by(GEOID) %>%
+      # summarize(
+      #   weighted_mean_dist_m = sum(dist_m * POP, na.rm = TRUE) / sum(POP, na.rm = TRUE),
+      #   weighted_mean_percentile = sum(dist_percentile * POP, na.rm = TRUE) / sum(POP, na.rm = TRUE),
+      #   total_population = sum(POP, na.rm = TRUE),
+      #   .groups = "drop"
+      # )
+    # df_list[[i]] = tract_summary
+    df_list[[i]] = tracts_output
+  }
+  return(df_list)
+}
+```
+
+
 ```{r}
 data_list_within = get_within(data_list[c(1,4,5,7,8,10,12:15,17)], dc_tracts)
+data_list_proximity = get_proximity(data_list[c(1,4,5,7,8,10,12:15,17)], dc_tracts)
 data_list_intersect = get_intersect(data_list[c(3, 6, 9, 11, 16)], dc_tracts)
-data_list_intersection = get_intersection(data_list[c(3, 6, 9, 11, 16)], dc_tracts)
+# data_list_overlap = get_overlaps(data_list[c(3, 6, 9, 11, 16)], dc_tracts)
+# data_list_intersection = get_intersection(data_list[c(3, 6, 9, 11, 16)], dc_tracts)
 ```
 
 ```{r}
@@ -136,16 +273,32 @@ data_list_intersection = get_intersection(data_list[c(3, 6, 9, 11, 16)], dc_trac
 flood_aggregated = data_list_intersect$Floodplain_Base_Flood_Elevations.shp %>%
   st_drop_geometry() %>%
   group_by(GEOID) %>%
-  summarise(MEAN_ELEV = mean(ELEV), MED_ELEV = median(ELEV)) %>%
-  select(c(GEOID, MEAN_ELEV, MED_ELEV))
+  summarise(TRACT_MEAN_ELEV = mean(ELEV), TRACT_MED_ELEV = median(ELEV)) %>%
+  select(c(GEOID, TRACT_MEAN_ELEV, TRACT_MED_ELEV))
   
 ## Hospital Areas Data
 hospital_aggregated = data_list_intersect$Hospital_Areas.shp %>%
   st_drop_geometry() %>%
   group_by(GEOID) %>%
-  summarise(MEAN_ELEV = mean(ELEV), MED_ELEV = median(ELEV)) %>%
-  select(c(GEOID, ))
+  summarise(TRACT_COUNT_Hospital = n()) %>%
+  select(c(GEOID, TRACT_COUNT_Hospital))
 data_list_intersect$Hospital_Areas.shp = left_join(dc_tracts, hospital_aggregated, by = "GEOID")
+
+## Food Access Areas Data
+food_aggregated = data_list_intersect$Low_Food_Access_Areas.shp %>%
+  st_drop_geometry() %>%
+  group_by(GEOID) %>%
+  summarise(TRACT_COUNT_Food_Access = n()) %>%
+  select(c(GEOID, TRACT_COUNT_Food_Access))
+data_list_intersect$Low_Food_Access_Areas.shp = left_join(dc_tracts, food_aggregated, by = "GEOID")
+  
+## Public Housing Data
+housing_aggregated = data_list_intersect$Public_Housing_Areas.shp %>%
+  st_drop_geometry() %>%
+  group_by(GEOID) %>%
+  summarise(TRACT_COUNT_Public_House = n()) %>%
+  select(c(GEOID, TRACT_COUNT_Public_House))
+data_list_intersect$Public_Housing_Areas.shp = left_join(dc_tracts, housing_aggregated, by = "GEOID")
 ```
 
 # Places, EJI Screen, and Built Enviornment
@@ -205,8 +358,28 @@ for(i in 1:length(data_list_within)){
   data_combined = left_join(data_combined, new_data)
 }
 
+## Join Proximity Data
+for(i in 1:length(data_list_proximity)){
+  new_data = data_list_proximity[[i]] %>%
+              st_drop_geometry() %>%
+              select(GEOID, contains("dist_to_m"))
+  data_combined = left_join(data_combined, new_data)
+}
+
 ## Join Intersect Data
-data_combined = left_join(data_combined, flood_aggregated)
+for(i in 1:length(data_list_intersect)){
+  new_data = data_list_intersect[[i]] %>%
+              st_drop_geometry() %>%
+              select(GEOID, contains("TRACT"))
+  data_combined = left_join(data_combined, new_data)
+}
+
+## Join Intersect Data
+# data_combined = left_join(data_combined, flood_aggregated)
 
 ```
 
+```{r}
+
+
+```
