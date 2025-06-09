@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20131226</pubdate>
+                <title>Recreation Facilities</title>
+                <geoform>vector digital data</geoform>
+                <lworkcit>
+                    <citeinfo>
+                        <title>DC Geographic Information System</title>
+                    </citeinfo>
+                </lworkcit>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>DC Department of Parks and Recreation child care, administrative, maintenance, specialty and recreation centers identified as points. The dataset contains the addresses of these DPR centers, and has been created as part of the DC Geographic Information System (DC GIS) for the D.C. Office of the Chief Technology Officer (OCTO) and participating D.C. government agencies. This data is provided by the Department of Parks and Recreation and contains the location and other information about centers under the jurisdiction of the DC Department of Parks and Recreation. </abstract>
+            <purpose>Recreation facilities in the District of Columbia identified by the Department of Parks and Recreation.</purpose>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <sngdate>
+                    <caldate>20131226</caldate>
+                </sngdate>
+            </timeinfo>
+            <current>publication date</current>
+        </timeperd>
+        <status>
+            <progress>In work</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-77.104641</westbc>
+                <eastbc>-76.912214</eastbc>
+                <northbc>38.97027</northbc>
+                <southbc>38.818825</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>Recreation Facility</themekey>
+                <themekey>Government Facility</themekey>
+                <themekey>Recreation Properties</themekey>
+                <themekey>Amenities</themekey>
+                <themekey>Recreation Center</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>society</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>DCGIS</placekey>
+                <placekey>DC</placekey>
+                <placekey>DC GIS</placekey>
+                <placekey>District of Columbia</placekey>
+                <placekey>Washington</placekey>
+                <placekey>D.C.</placekey>
+            </place>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Department of Parks and Recreation</cntorg>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>1275 First Street, NE, 8th floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20002</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 673-7674</cntvoice>
+                <cntemail>dpr@dc.gov</cntemail>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>Department of Parks and Recreation</datacred>
+        <native>Version 6.2 (Build 9200) ; Esri ArcGIS 10.8.1.14362</native>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Data believed to be complete and accurate as of the time period cited. Subject to change. Digital version compared with original source data for accuracy and completeness. In process of validation by source and/or responsible agency.</attraccr>
+        </attracc>
+        <logic>In process of validation by source and/or responsible agency.</logic>
+        <complete>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. In process of validation by source and/or responsible agency. Most sites belong to DPR, however, some are operated by other entities (i.e. boys and girls club, etc). They are included in the data.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>In most cases, the pools were moved to the visual center of swimming pool polygons captured as part of the planimetric data collection and impervious surface requirements.</horizpar>
+            </horizpa>
+        </posacc>
+        <posacc>
+            <vertacc>
+                <vertaccr>N/A</vertaccr>
+            </vertacc>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20091001</pubdate>
+                        <title>Department of Parks and Recreation Web Site</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Department of Parks and Recreation Web Site</srccitea>
+                <srccontr>location and attributes</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <title>NPS Park Boundaries in DC</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>NPS Park Boundaries in DC</srccitea>
+                <srccontr>location</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>Same as RecPnts with points added for standalone pools that DPR maintains. Labeled as 'POOLS' in 'USE_TYPE' column (all these points are new except William Rumsey Aquatic Center). Also added the following points : Douglass Jr Rec Center was missing Oyster Before and After School Care was missing Deleted the following points: Lincoln capper rec center Closed Virginia Ave Boxing Center Closed Watts Branch Rec center changed names to Marvin Gaye Rec Center. Added fields: School_site - name of public school if located in one Pool - does it include a pool Pool_name - the pool's name Child_care - the location have a daycare/before and after care program Senior_services - the location have senior services</procdesc>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>DC Department of Parks and Recreation</cntorg>
+                            <cntper>Frank O"brien</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>3149 16th St NW 4th floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20001</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntvoice>202-673-7693</cntvoice>
+                        <cntemail>frank.o'brien@dc.gov</cntemail>
+                        <hours>9am - 5pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Added the following pools: East Potomac (federal) Francis (DCPS) Fort Dupont (federal) Oxon Run Randall Upshur Some pools fall under the management of the Federal government and other DC agencies.</procdesc>
+            </procstep>
+            <procstep>
+                <procdesc>Points were located within DPR center building confines and verified using 2002 aerial imagery. Addresses have not been verified within the MAR. This is an edited version of an original data set as received in shape file format from the NPS in November 2004.</procdesc>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>DC Department of Parks and Recreation</cntorg>
+                            <cntper>Jim Amerault</cntper>
+                        </cntorgp>
+                        <cntpos>GIS Specialist</cntpos>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <city>3149 16th Street, NW</city>
+                            <state>Washington</state>
+                            <postal>DC</postal>
+                            <country>20010</country>
+                        </cntaddr>
+                        <cntfax>202 673-7693</cntfax>
+                        <cntemail>Jim.Amerault@dc.gov</cntemail>
+                        <hours>9am - 5pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>DC GIS staff updated the recreation facility layer based on information on the Department of Parks and Recreation web site.</procdesc>
+                <procdate>20091001</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Added two former Boys and Girls Club locations that DPR purchased in Jan 2010. 1. Jelleff Recreation Center 2. Loughran Recreation Center DPR has not posted information about these properties on their website as of may 14, 2010. More attribution will come when DPR adds them to their website.</procdesc>
+                <procdate>20100514</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Pools were assigned to their own feature, separated from recreation centers. Staff updated other fields such as phone number and web links as part of the DPR/OCTO ongoing DPR database enhancement program. Education and Early Child Care records were removed and will no longer be maintained by DPR.</procdesc>
+                <procdate>20100806</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Updated wards to 2012</procdesc>
+                <procdate>20120309</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Updated recreation centers based on the latest DPR quickbase inventory.</procdesc>
+                <procdate>20121226</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Staff added Arthur Capper Community Center.</procdesc>
+                <procdate>20190215</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>updated spray parks</procdesc>
+                <procdate>20190719</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>staff updated spray park locations.</procdesc>
+                <procdate>20210618</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Update from DPR website</procdesc>
+                <procdate>20220422</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Changed Ward values as needed.  About 10 records were affected by Ward redistricting
+• Updated XY Coordinates.   For example, Spay Parks moved to exact location (where I could located it)
+• Updated a few ADDRESS_ID that were incorrect
+• Updated 2 Addresses that were incorrect.
+• Updated some WebURL
+• Updated about 10 phone numbers
+• Deleted CHILD_CARE and SENIOR_SERVICES fields as this information was all NULL and was not readily accessible.   
+• Updated Open Status on  a few records
+• Deleted: Joy Evans Therapeutic Aquatic Center and Ballou Aquatic Center as these no longer exist.
+• Updated a few Pool Names</procdesc>
+                <procdate>20220812</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Updated Names to match DPR website.</procdesc>
+                <procdate>20230203</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Added Reservoir Park Recreation Center</procdesc>
+                <procdate>20240621</procdate>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>Entity point</sdtstype>
+                <ptvctcnt>139</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>DCGIS.RecPt</enttypl>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>NAME</attrlabl>
+                <attrdef>Recreation Property Name</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>ADDRESS</attrlabl>
+                <attrdef>Recreation Property Address</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>USE_TYPE</attrlabl>
+                <attrdef>Recreation Property Use Type</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>WARD_ID</attrlabl>
+                <attrdef>Ward Name</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>SCHOOL_SITE</attrlabl>
+                <attrdef>school site DPR facility uses</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>POOL</attrlabl>
+                <attrdef>Pool</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>POOL_NAME</attrlabl>
+                <attrdef>Pool name</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>WEB_URL</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>PHONE</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>STATUS</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>XCOORD</attrlabl>
+                <attrdef>MAR X Coordinates (Maryland State Plane Meters)</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>YCOORD</attrlabl>
+                <attrdef>MAR Y Coordinates (Maryland State Plane Meters)</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>MAR_ID</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>FITNESS_CENTER</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SE_ANNO_CAD_DATA</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>GLOBALID</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>CREATOR</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>CREATED</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>EDITOR</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>EDITED</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>GIS_ID</attrlabl>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <custom>DC datasets can be downloaded from "http://opendata.dc.gov".</custom>
+    </distinfo>
+    <metainfo>
+        <metd>20240827</metd>
+        <metrd>8/17/05</metrd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

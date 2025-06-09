@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20140828</pubdate>
+                <title>Parks and Recreation Areas</title>
+                <geoform>vector digital data</geoform>
+                <lworkcit>
+                    <citeinfo>
+                        <title>DC Geographic Information System</title>
+                    </citeinfo>
+                </lworkcit>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Department of Parks and Recreation (DPR) properties identified as polygons. The dataset contains general locations and amenity information about the properties under the jurisdiction of the DC Department of Parks and Recreation. It has been created as part of the DC Geographic Information System (DC GIS) for the D.C. Office of the Chief Technology Officer (OCTO) and participating D.C. government agencies. This data is provided by the Department of Parks and Recreation.</abstract>
+            <purpose>Department of Parks and Recreation (DPR) properties identified as parks and recreation areas.</purpose>
+        </descript>
+        <status>
+            <progress>In work</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-77.111215</westbc>
+                <eastbc>-76.910961</eastbc>
+                <northbc>38.988102</northbc>
+                <southbc>38.817115</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>Recreation Facility</themekey>
+                <themekey>Government Facility</themekey>
+                <themekey>Recreation Properties</themekey>
+                <themekey>Amenities</themekey>
+                <themekey>Recreation Center</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>society</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>DCGIS</placekey>
+                <placekey>DC</placekey>
+                <placekey>DC GIS</placekey>
+                <placekey>District of Columbia</placekey>
+                <placekey>Washington</placekey>
+                <placekey>D.C.</placekey>
+            </place>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Department of Parks and Recreation</cntorg>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>1275 First Street, NE, 8th floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20002</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 673-7647</cntvoice>
+                <cntfax>(202) 673-2087</cntfax>
+                <cntemail>dpr@dc.gov</cntemail>
+                <hours>8:30 am to 5:30 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>Department of Parks and Recreation</datacred>
+        <native>Version 6.2 (Build 9200) ; Esri ArcGIS 10.6.1.9273</native>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Data believed to be complete and accurate as of the time period cited. Subject to change. Digital version compared with original source data for accuracy and completeness. In process of validation by source and/or responsible agency.</attraccr>
+        </attracc>
+        <logic>In process of validation by source and/or responsible agency.</logic>
+        <complete>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. In process of validation by source and/or responsible agency.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>In process of validation by source and/or responsible agency.</horizpar>
+            </horizpa>
+        </posacc>
+        <posacc>
+            <vertacc>
+                <vertaccr>N/A</vertaccr>
+            </vertacc>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <title>NPS Park Boundaries in DC</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>NPS Park Boundaries in DC</srccitea>
+                <srccontr>Location</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>Polygons were located and digitized within sidewalk confines and verified using the 2002 aerial imagery. Where sidewalks were absent, the boundary extends to the street curb. Veteran DPR personell were used when boundary questions arose. Addresses have not been verified to the District Master Address Repository. They are general in nature merely for location reference. This is an edited version of an original data set received as shape files from the NPS in November 2004. No topological quality claim is made.</procdesc>
+            </procstep>
+            <procstep>
+                <procdesc>1. Added new polygon for Jelleff Field. Used the OwnerPly polygon to delineate the field boundary. Updated attributes as best as possible. DPR has not posted information about this property on their website. There are plans to upgrade the property. 2. Added new polygon for Diamond Teague Park. New park 3. Added Town Center Park polygons. Parks transferred to DPR 4. Added new 'comment' field. Added text for Diamond Teague Park.</procdesc>
+                <procdate>20100514</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Updated wards to 2012</procdesc>
+                <procdate>20120309</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>The updated geometry of RecPly is now coincident with vecotr property map features and represents DPR holdings that have been tranferred by the Federal Government for Recreational and related purposes. Source material from the Office of the Surveyor was referenced in order to correctly COGO boundaries when only part(s) of a VPM feature were affected</procdesc>
+                <procdate>20140828</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Staff added Keene Park</procdesc>
+                <procdate>20171201</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Staff removed DPR_0180 (Reservation 180)</procdesc>
+                <procdate>20180928</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Staff added Arthur Capper Community Center.</procdesc>
+                <procdate>20190215</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Staff added Franklin Square.</procdesc>
+                <procdate>20190315</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Added Reservoir Park</procdesc>
+                <procdate>20240621</procdate>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>GT-polygon composed of chains</sdtstype>
+                <ptvctcnt>0</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>DCGIS.RecPly</enttypl>
+                <enttypd>Recreation Property Name</enttypd>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>NAME</attrlabl>
+                <attrdef>Recreation Property Name</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>ADDRESS</attrlabl>
+                <attrdef>Recreation Property Address</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>USE_TYPE</attrlabl>
+                <attrdef>Recreation Property Use Type</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>PROPID</attrlabl>
+                <attrdef>DPR Property Identifier</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>ACTIVE</attrlabl>
+                <attrdef>Active park</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>DIAMOND60</attrlabl>
+                <attrdef>Number of Little League Baseball Fields w/ 60' Diamond</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>DIAMOND90</attrlabl>
+                <attrdef>Number of Little League Baseball Fields w/ 90' Diamond</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>BBCOURT</attrlabl>
+                <attrdef>Number of Basketball Courts</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>FBFIELD</attrlabl>
+                <attrdef>Number of Football Fields</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>SOCCERJR</attrlabl>
+                <attrdef>Number of Junior Soccer Fields</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>SOCCERREG</attrlabl>
+                <attrdef>Number of Regular Soccer Fields</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>TENNISCT</attrlabl>
+                <attrdef>Number of Tennis Courts</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>VOLLEYB</attrlabl>
+                <attrdef>Number of Volleyball Courts</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>SKATEPARK</attrlabl>
+                <attrdef>Number of Skate Parks</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>WOODLAND</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>VSTRSHCAN</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>DMPSTR</attrlabl>
+                <attrdef>Number of Dumpsters</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>PICNIC</attrlabl>
+                <attrdef>Number of Picnic Areas</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>PLYGRD</attrlabl>
+                <attrdef>Number of Playgrounds</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>TOTLOT</attrlabl>
+                <attrdef>Number of Tot Lots</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>INSWIM</attrlabl>
+                <attrdef>Number of Indoor Swimming Pools</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>OUTSWIM</attrlabl>
+                <attrdef>Number of Outdoor Swimming Pools</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>SPRAYPARK</attrlabl>
+                <attrdef>Number of Spray Parks</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>UTILBX</attrlabl>
+                <attrdef>Number of Utility Boxes</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>TRAFPOLE</attrlabl>
+                <attrdef>Number of Traffic Poles</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>UTILPOLE</attrlabl>
+                <attrdef>Number of Utility Poles</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>BUSSTP</attrlabl>
+                <attrdef>Bus Stop Accessible</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>LOCK_</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>NMZ</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>DRINKFOUNT</attrlabl>
+                <attrdef>Number of Drinking Fountains</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>BENCHES</attrlabl>
+                <attrdef>Number of benches</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>ATHLIGHT</attrlabl>
+                <attrdef>Type of Athletic Field Lights</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>LNDSCPBED</attrlabl>
+                <attrdef>Type of Landscape Beds</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>TOTIMPV</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>SIGNS</attrlabl>
+                <attrdef>Type of Signs</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>TURFONLY</attrlabl>
+                <attrdef>Turf only condition</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>FENCE</attrlabl>
+                <attrdef>Type of Fence</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>TOPO</attrlabl>
+                <attrdef>Type of Topography at Recreation Facility</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>COMMGAR</attrlabl>
+                <attrdef>Common gardens</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>WARD</attrlabl>
+                <attrdef>Ward ID</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>AREA_</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>ZONE_</attrlabl>
+                <attrdef>Zone ID</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>PARKPARTN</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>RES_NUM</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>ADJ_SCHOOL_SITE</attrlabl>
+                <attrdef>Name of Adjunct School Site</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>SSL</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>COMMENTS</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>DATE_ACQUIRED</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>SE_ANNO_CAD_DATA</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE.AREA</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE.LEN</attrlabl>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20001</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-1761</cntvoice>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+                <cntinst>email</cntinst>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <custom>DC datasets can be downloaded from "http://opendata.dc.gov".</custom>
+    </distinfo>
+    <metainfo>
+        <metd>20240827</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

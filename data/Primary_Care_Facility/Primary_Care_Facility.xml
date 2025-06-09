@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20140704</pubdate>
+                <title>Primary Care Centers</title>
+                <geoform>vector digital data</geoform>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Primary care centers where residents can find available health care services in the District of Columbia. The dataset contains locations and attributes of Primary Care Centers, created as part of the DC Geographic Information System (DC GIS) for the D.C. Office of the Chief Technology Officer (OCTO) and participating D.C. government agencies. A database provided by the DC Department of Health (DOH) identified Primary Care Centers and DC GIS staff geo-processed the data.</abstract>
+            <purpose>Primary care centers where residents can find available health care services in the District of Columbia.</purpose>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <sngdate>
+                    <caldate>20140704</caldate>
+                </sngdate>
+            </timeinfo>
+            <current>publication date</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-77.080638</westbc>
+                <eastbc>-76.933967</eastbc>
+                <northbc>38.952649</northbc>
+                <southbc>38.831246</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>Healthcare</themekey>
+                <themekey>Treatment</themekey>
+                <themekey>Hospitals</themekey>
+                <themekey>Health</themekey>
+                <themekey>Primary care</themekey>
+                <themekey>Clinics</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>health</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>Washington</placekey>
+                <placekey>D.C.</placekey>
+                <placekey>District of Columbia</placekey>
+                <placekey>DC</placekey>
+                <placekey>DC GIS</placekey>
+                <placekey>DCGIS</placekey>
+            </place>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Department of Health</cntorg>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>899 North Capitol Street, NE</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20002</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 442-5955</cntvoice>
+                <cntfax>(202) 442-4795</cntfax>
+                <cntemail>doh@dc.gov</cntemail>
+                <hours>8:30 am - 5:00 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>Department of Health</datacred>
+        <native>Esri ArcGIS 13.0.0.36056</native>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. In process of validation by source and/or responsible agency.</attraccr>
+        </attracc>
+        <logic>In process of validation by source and/or responsible agency.</logic>
+        <complete>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. In process of validation by source and/or responsible agency.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>In process of validation by source and/or responsible agency.</horizpar>
+            </horizpa>
+        </posacc>
+        <posacc>
+            <vertacc>
+                <vertaccr>n/a</vertaccr>
+            </vertacc>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <title>Primary Care Facilities in the District of Columbia</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>onLine</typesrc>
+                <srccitea>Primary Care Facilities in the District of Columbia</srccitea>
+                <srccontr>locations and attributes</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>Obtained data table from DOH. Imported table to access and geocoded data through MAR Batch Geocoder (standalone version). Created feature class and updated Ward and Census Tract fields from data obtained via MAR. Replaced existing data with new dataset collected and reviewed by DOH Primary Care Bureau. Added additional fields, including accepted insurance information and access information. 201207</procdesc>
+                <procdate>20120712</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>District of Columbia Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20001</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Deleted Unity Good Hope; no longer Primary Care Center, per DOH Primary Care Added Elaine Ellis Center. Updated fields per DOH Primary Care instruction.</procdesc>
+                <procdate>20131004</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>OCTO</cntorg>
+                        </cntorgp>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Added: Unity – Parkside Health Center Community of Hope – Conway Health and Resource Center Deleted: Unity – Hunt Place Changed: Carl Vogel Center, name changed to MetroHealth Updates to PRIMARY_CARE_INFO (stored as PRIMARY_CARE_INFO_Merge): Added: Unity – Parkside Health Center Community of Hope – Conway Health and Resource Center Deleted: Unity – Hunt Place All changes per DOH Community Health Administration</procdesc>
+                <procdate>20140704</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>OCTO</cntorg>
+                        </cntorgp>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Staff updated the dataset with added 7 new locations</procdesc>
+                <procdate>20200313</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>unknown</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Updated data and attribute values.</procdesc>
+                <procdate>20220923</procdate>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>Entity point</sdtstype>
+                <ptvctcnt>49</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>PrimaryCarePt</enttypl>
+            </enttyp>
+            <attr>
+                <attrlabl>ADDRID</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>NAME</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>ADDRESS</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>CITY</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>STATE</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>ZIP</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>WARD</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>PHONE</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>FAX</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>CT_HPSA</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>MEDICALDIR</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>CHARGENURS</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>ADMINISTRA</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>WEB_URL</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>MAR_CENSUS</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>SEE_PATIENTS_WHO_CANT_PAY</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>POPULATION_SERVED</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>WALKIN_UNSCHEDULED</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>INSURANCE_ACCEPTED</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>XCOORD</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>YCOORD</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>GIS_ID</attrlabl>
+                <attrdef>OCTO GIS sequential identifier</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>OPEN_TO_PUBLIC</attrlabl>
+                <attrdef>Are general services available to the general public</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LIMITED_ACCESS</attrlabl>
+                <attrdef>If not open to general public, to what specific population(s) does facility provide services?</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>TREATMENT_FOR_ALL</attrlabl>
+                <attrdef>Does facility treat individuals regardless of their ability to pay?</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PUBLIC_INSURANCE</attrlabl>
+                <attrdef>Public Insurance carriers accepted at facility</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>MEDICAID</attrlabl>
+                <attrdef>Is Medicaid accepted?</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>MEDICARE</attrlabl>
+                <attrdef>Is Medicare accepted?</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PRIVATE_EMPLOYER_INSURANCE</attrlabl>
+                <attrdef>Private employer insurance carriers accepted</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PRIVATE_INSURANCE</attrlabl>
+                <attrdef>Private insurance carriers accepted.</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SLIDING_SCALE</attrlabl>
+                <attrdef>Does practice offer a sliding scale fee based on income or ability to pay?&gt;</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>FACILITY_SETTING</attrlabl>
+                <attrdef>What type of practice setting is this facility: Community Health Center; FQHC; FQHC look-alike; Free clinic; School Based Health Center; Other</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>FACILITY_TYPE</attrlabl>
+                <attrdef>What type of entity is this facility? Private for-profit; Private non-profit; Other</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>YESNO</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>LAST_MODIFIED_DATE</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>LAST_MODIFIED_USER</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>LAST_MODIFIED_ACTION</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>PRACTICE_TYPE</attrlabl>
+                <attrdef>What type of practice setting is this facility:  Community Health Center; FQHC; FQHC look-alike; Free clinic; School Based Health Center; Other</attrdef>
+                <attrdefs>DOH</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ZIP_1</attrlabl>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <custom>DC datasets can be downloaded from "http://opendata.dc.gov".</custom>
+    </distinfo>
+    <metainfo>
+        <metd>20220922</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

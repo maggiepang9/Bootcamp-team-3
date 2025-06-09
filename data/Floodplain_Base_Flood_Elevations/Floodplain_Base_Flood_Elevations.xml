@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20100927</pubdate>
+                <title>Floodplain Base Flood Elevations</title>
+                <geoform>vector digital data</geoform>
+                <lworkcit>
+                    <citeinfo>
+                        <origin/>
+                        <pubdate>20100927</pubdate>
+                        <title>FEMA CASE MICS_12682</title>
+                    </citeinfo>
+                </lworkcit>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Location and attributes for Base Flood Elevations lines shown on FIRM. The elevation of surface water resulting from a flood that has a 1% chance of equaling or exceeding that level in any given year. The BFE is shown on the Flood Insurance Rate Map (FIRM) for zones AE, AH, A1–A30, AR, AR/A, AR/AE, AR/A1– A30, AR/AH, AR/AO, V1–V30 and VE.</abstract>
+            <purpose>The FIRM is the basis for floodplain management, mitigation, and insurance activities for the National Flood Insurance Program (NFIP).</purpose>
+            <supplinf>The Base Flood Elevation (BFE) table is required for any digital data where BFE lines will be shown on the corresponding Flood Insurance Rate Map (FIRM). Normally, if there are any riverine AE zones, BFE lines are required. The BFE table contains information about the BFEs within a study area. A spatial file with locational information also corresponds with this data table. BFE lines indicate the rounded whole-foot water-surface elevation of the 1-percent-annual-chance flood. The spatial elements representing BFE features are lines extending from Special Flood Hazard Area (SFHA) boundary to SFHA boundary. The BFE lines will have no visible gaps or overshoots between the SFHA boundary and the end of the BFE line at the publication scale of the DFIRM. However, the ends of the BFE lines are not necessarily snapped precisely to the SFHA boundary. Each BFE is represented by a single line. While BFE lines are depicted as wavy lines on the hardcopy FIRM, they should be primarily straight lines in the spatial data, although they may bend consistent with procedures described in Volume 1 of these Guidelines.</supplinf>
+        </descript>
+        <status>
+            <progress>Complete</progress>
+            <update>Irregular</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-77.13</westbc>
+                <eastbc>-76.9</eastbc>
+                <northbc>39.01</northbc>
+                <southbc>38.78</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>FEMA NFIP Topic Category</themekt>
+                <themekey>NFIP</themekey>
+                <themekey>FEMA Flood Hazard Zone</themekey>
+                <themekey>Inland Waters</themekey>
+                <themekey>Digital Flood Insurance Rate Map</themekey>
+                <themekey>Elevation</themekey>
+                <themekey>Riverine Flooding</themekey>
+                <themekey>Transportation</themekey>
+                <themekey>Environment</themekey>
+                <themekey>DFIRM Database</themekey>
+                <themekey>Floodway</themekey>
+                <themekey>Special Flood Hazard Area</themekey>
+                <themekey>Flood Insurance Rate Map</themekey>
+                <themekey>Base Flood Elevation</themekey>
+                <themekey>DFIRM</themekey>
+                <themekey>FIRM</themekey>
+                <themekey>Hydrology</themekey>
+                <themekey>SFHA</themekey>
+                <themekey>Structure</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>washington dc</placekey>
+                <placekey>district of columbia</placekey>
+                <placekey>dc</placekey>
+            </place>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Federal Emergency Management Agency</cntorg>
+                </cntorgp>
+                <cntpos>Flood Map Service Center</cntpos>
+                <cntaddr>
+                    <addrtype>mailing</addrtype>
+                    <address>500 C Street SW</address>
+                    <city>Washington</city>
+                    <state>District of Columbia</state>
+                    <postal>20472</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>1-800-358-9616</cntvoice>
+                <cntemail>mscservices@riskmapcds.com</cntemail>
+                <cntinst>None</cntinst>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>octo@dc.gov</cntemail>
+                <hours>8:30 am to 5:30 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>Federal Emergency Management Agency</datacred>
+        <native>Esri ArcGIS 13.0.3.36057</native>
+        <crossref>
+            <citeinfo>
+                <origin/>
+                <pubdate>20100927</pubdate>
+                <pubtime>120000</pubtime>
+                <title>Flood Insurance Rate Map, WASHINGTON, DISTRICT OF COLUMBIA</title>
+                <geoform>map</geoform>
+                <pubinfo>
+                    <pubplace/>
+                    <publish>Federal Emergency Management Agency</publish>
+                </pubinfo>
+                <onlink>http://www.fema.gov/msc</onlink>
+            </citeinfo>
+        </crossref>
+        <crossref>
+            <citeinfo>
+                <origin/>
+                <pubdate>20100927</pubdate>
+                <pubtime>120000</pubtime>
+                <title>Raster DFIRM, WASHINGTON, DISTRICT OF COLUMBIA</title>
+                <geoform>raster digital data</geoform>
+                <pubinfo>
+                    <pubplace/>
+                    <publish>Federal Emergency Management Agency</publish>
+                </pubinfo>
+                <onlink>http://www.fema.gov/msc</onlink>
+            </citeinfo>
+        </crossref>
+        <crossref>
+            <citeinfo>
+                <origin/>
+                <pubdate>20100927</pubdate>
+                <pubtime>120000</pubtime>
+                <title>Flood Insurance Study, WASHINGTON, DISTRICT OF COLUMBIA</title>
+                <geoform>map</geoform>
+                <pubinfo>
+                    <pubplace/>
+                    <publish>Federal Emergency Management Agency</publish>
+                </pubinfo>
+                <onlink>http://www.fema.gov/msc</onlink>
+            </citeinfo>
+        </crossref>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>The DFIRM Database consists of countywide vector files and associated attributes produced in conjunction with the hard copy FEMA FIRM. The published effective FIRM and DFIRM maps are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Specifications for Flood Hazard Mapping Partners. Attribute accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic System. Independent quality control testing of FEMA's DFIRM database was also performed. To obtain more detailed information in areas where Base Flood Elevations (BFEs) and/or floodways have been determined, users are encouraged to consult the Flood Profiles and Floodway Data and/or Summary of Stillwater Elevations tables contained within the FIS report that accompanies this DFIRM database. Users should be aware that BFEs shown in the S_BFE table represent rounded whole-foot elevations. These BFEs are intended for flood insurance rating purposes only and should not be used as the sole source of flood elevation information. Accordingly, flood elevation data presented in the FIS report must be used in conjunction with the FIRM for purposes of construction and/or floodplain management. The 1-percent-annual-chance water-surface elevations shown in the S_XS table match the regulatory elevations shown in the FIS report.</attraccr>
+        </attracc>
+        <logic>When FEMA revises an FIS, adjacent studies are checked to ensure agreement between flood elevations at the boundaries. Likewise flood elevations at the confluence of streams studied independently are checked to ensure agreement at the confluence. The FIRM and the FIS are developed together and care is taken to ensure that the elevations and other features shown on the flood profiles in the FIS agree with the information shown on the FIRM. However, the elevations as shown on the FIRM are rounded whole-foot elevations. They must be shown so that a profile recreated from the elevations on the FIRM will match the FIS profiles within one half of one foot.</logic>
+        <complete>Data contained in the DFIRM Database files reflect the content of the source materials. Features may have been eliminated or generalized on the source graphic, due to scale and legibility constraints. With new mapping, FEMA plans to maintain full detail in the spatial data it produces. However, older information is often transferred from existing maps where some generalization has taken place. Flood risk data are developed for communities participating in the NFIP for use in insurance rating and for floodplain management. Flood hazard areas are determined using statistical analyses of records of river flow, storm tides, and rainfall; information obtained through consultation with the communities; floodplain topographic surveys; and hydrological and hydraulic analysis. Both detailed and approximate analyses are employed. Generally, detailed analyses are used to generate flood risk data only for developed or developing areas of communities. For areas where little or no development is expected to occur, FEMA uses approximate analyses to generate flood risk data. Typically, only drainage areas that are greater than one square mile are studied.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>The DFIRM Database consists of countywide vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and DFIRM are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Specifications for Flood Hazard Mapping Partners. Horizontal accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of FEMA's DFIRM database was also performed.</horizpar>
+            </horizpa>
+        </posacc>
+        <posacc>
+            <vertacc>
+                <vertaccr>The DFIRM Database consists of countywide vector files and associated attributes produced in conjunction with the hardcopy FEMA FIRM. The published effective FIRM and DFIRM maps are issued as the official designation of the SFHAs. As such they are adopted by local communities and form the basis for administration of the NFIP. For these purposes they are authoritative. Provisions exist in the regulations for public review, appeals and corrections of the flood risk information shown to better match real world conditions. As with any engineering analysis of this type, variation from the estimated flood heights and floodplain boundaries is possible. Details of FEMA's requirements for the FISs and flood mapping process that produces these data are available in the Guidelines and Specifications for Flood Hazard Mapping Partners. Vertical accuracy was tested by manual comparison of source graphics with hardcopy plots and a symbolized display on an interactive computer graphic system. Independent quality control testing of FEMA's DFIRM database was also performed.</vertaccr>
+            </vertacc>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srcscale>200</srcscale>
+                <typesrc>CD-ROM</typesrc>
+                <srccontr>Spatial and attribute information for The original imagery came from true color stable-base aerial photography film flown at 7,500 feet above average ground elevation. The digital raster files for each orthoimage chip provide imagery used in the digital orthoimage..</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srcscale>24000</srcscale>
+                <typesrc>CD-ROM</typesrc>
+                <srccontr>Spatial and attribute information for information was created at a scale of 1:24000..</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>The DFIRM Database is compiled in conjunction with the hardcopy FIRM and the final FIS report. The specifics of the hydrologic and hydraulic analyses performed are detailed in the FIS report. The results of these studies are submitted in digital format to FEMA. These data and unrevised data from effective FIRMs are compiled onto the base map used for DFIRM publication and checked for accuracy and compliance with FEMA standards.</procdesc>
+                <procdate>20100927</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Update from https://msc.fema.gov/portal/home</procdesc>
+                <procdate>20250411</procdate>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>String</sdtstype>
+                <ptvctcnt>400</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>DCGIS.FldPlnPly_BaseFloodElevation</enttypl>
+                <enttypd>Location and attributes for base flood elevations lines shown on the DFIRM</enttypd>
+                <enttypds>FEMA FIRM Database Technical Reference (available at https://www.fema.gov/sites/default/files/2020-02/FIRM_Database_Technical_Reference_Feb_2019.pdf)</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>DFIRM_ID</attrlabl>
+                <attrdef>Study Identifier.  For a single-jurisdiction Flood Risk Project, the value is composed of the two-digit State FIPS code and the four-digit FEMA CID code (e.g., 480001).  For a countywide Flood Risk Project, the value is composed of the two-digit State FIPS code, the three-digit county FIPS code, and the letter “C” (e.g., 48107C).  Within each FIRM Database, the DFIRM_ID value will be identical.</attrdef>
+                <attrdefs>FEMA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>VERSION_ID</attrlabl>
+                <attrdef>Version Identifier.  Identifies the product version and relates the feature to standards according to how it was created.</attrdef>
+                <attrdefs>FEMA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>BFE_LN_ID</attrlabl>
+                <attrdef>Primary key for table lookup. Assigned by table creator.</attrdef>
+                <attrdefs>FEMA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ELEV</attrlabl>
+                <attrdef>The rounded, whole-foot elevation of the 1-percent-annualchance flood.  This is the value of the BFE that is printed next to the BFE line on the FIRM.</attrdef>
+                <attrdefs>FEMA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LEN_UNIT</attrlabl>
+                <attrdef>BFE Units.  This unit indicates the measurement system used for the BFEs.  Normally this would be feet.  Acceptable values for this field are listed in the D_Length_Units table.</attrdef>
+                <attrdefs>FEMA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>V_DATUM</attrlabl>
+                <attrdef>Vertical Datum.  The vertical datum indicates the reference surface from which the flood elevations are measured.  Normally this would be North American Vertical Datum of 1988 for new studies.  Acceptable values for this field are listed in the D_V_Datum table.</attrdef>
+                <attrdefs>FEMA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SOURCE_CIT</attrlabl>
+                <attrdef>Source Citation.  Abbreviation used in the metadata file when describing the source information for the feature.  The abbreviation must match a value in L_Source_Cit.</attrdef>
+                <attrdefs>FEMA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>Esri</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SE_ANNO_CAD_DATA</attrlabl>
+                <attrdef>Internal Database storage type</attrdef>
+                <attrdefs>ESRI</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>GIS_ID</attrlabl>
+                <attrdef>OCTO GIS sequential identifier</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>GLOBALID</attrlabl>
+                <attrdef>Global ID</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CREATOR</attrlabl>
+                <attrdef>A user who created a record.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CREATED</attrlabl>
+                <attrdef>The dates a record were created</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>EDITOR</attrlabl>
+                <attrdef>A user who last edited a record.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>EDITED</attrlabl>
+                <attrdef>The dates a record were last edited.</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>GFID</attrlabl>
+                <attrdef>GF Identifier</attrdef>
+                <attrdefs>FEMA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE.LEN</attrlabl>
+                <attrdef>Length in meters</attrdef>
+                <attrdefs>ESRI</attrdefs>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <custom>DC datasets can be downloaded from "http://opendata.dc.gov".</custom>
+    </distinfo>
+    <metainfo>
+        <metd>20250413</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>octo@dc.gov</cntemail>
+                <hours>8:30 am to 5:30 pm</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

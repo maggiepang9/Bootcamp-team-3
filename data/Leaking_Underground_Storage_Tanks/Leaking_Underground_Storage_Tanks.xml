@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20060513</pubdate>
+                <title>Leaking Underground Storage Tanks</title>
+                <geoform>vector digital data</geoform>
+                <othercit>51 N Street, NE, 3rd Floor Washington, DC 20002 (202) 535-2525</othercit>
+                <lworkcit>
+                    <citeinfo>
+                        <title>DC Geographic Information System</title>
+                    </citeinfo>
+                </lworkcit>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Underground Storage Tank (UST) locations. The dataset contains locations and attributes of Underground Storage Tanks, created as part of the DC Geographic Information System (DC GIS) for the D.C. Office of the Chief Technology Officer (OCTO) and participating D.C. government agencies. A database provided by the Environmental Health Administration - DC Underground Storage Tanks Management identified Underground Storage Tank locations. The Underground Storage Tank (UST) branch’s services protects human health and the environment from the adverse effects of petroleum, petroleum-related products and hazardous materials from USTs in the District of Columbia. This branch is organized into two programs: Underground Storage Tanks (UST) and Leaking Underground Storage Tanks (LUST). For additional information including laws, regulation and other documents visit: https://doee.dc.gov/service/underground-storage-tank-program</abstract>
+            <purpose>This data is used for the planning and management of Washington, D.C. by local government agencies.</purpose>
+            <supplinf>The Underground Storage Tanks Management Division protects human health and the environment from the adverse effects of petroleum, petroleum-related products, and hazardous materials through: 1.) Prevention of releases from underground storage tanks (USTs) 2.) Inspection, investigation, remediation, monitoring, voluntary cleanup, and risk assessment programs to ensure compliance 3.) Strong enforcement of District and federal regulations The Underground Storage Tanks Management Division's goal is to prevent future releases from underground storage tanks and to ensure prompt and successful remediation of contaminated sites due to leaking tanks. Education and effective program implementation help protect human health, safety, and the environment. The Underground Storage Tanks Management Division monitors federally regulated and District-regulated tanks used for the storage of petroleum products, petroleum-related products, and hazardous and toxic substances. The District regulates heating oil tanks that are not currently regulated by the federal government. There are approximately 5,000 regulated underground storage tank systems registered in the District, of which 3,500 are federally regulated tanks that contain petroleum and hazardous substances. The remaining 1,500 are heating oil USTs, which are regulated in the District if they hold 1,100 gallons or more, or if they hold less than 1,100 gallons and have leaked before.</supplinf>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <sngdate>
+                    <caldate>20060513</caldate>
+                </sngdate>
+            </timeinfo>
+            <current>publication date</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-180</westbc>
+                <eastbc>180</eastbc>
+                <northbc>90</northbc>
+                <southbc>-90</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>Underground</themekey>
+                <themekey>society</themekey>
+                <themekey>environment</themekey>
+                <themekey>Facility</themekey>
+                <themekey>utilitiesCommunication</themekey>
+                <themekey>Tank</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>environment</themekey>
+                <themekey>society</themekey>
+                <themekey>utilitiesCommunication</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>District of Columbia</placekey>
+                <placekey>Washington</placekey>
+                <placekey>D.C.</placekey>
+                <placekey>DC</placekey>
+                <placekey>DC GIS</placekey>
+                <placekey>DCGIS</placekey>
+            </place>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Department of Energy and Environment</cntorg>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>1200 First Street, NE</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20002</postal>
+                </cntaddr>
+                <cntvoice>(202) 535-2600</cntvoice>
+                <cntfax>(202) 535-2881</cntfax>
+                <cntemail>doee@dc.gov</cntemail>
+                <hours>9 am to 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>Department of Energy and Environment</datacred>
+        <native>Esri ArcGIS 13.1.3.41833</native>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Data believed to be complete and accurate, subject to change.</attraccr>
+        </attracc>
+        <logic>In process of validation by source and/or responsible agency.</logic>
+        <complete>Data believed to be complete and accurate, subject to change.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>Most points geocoded to MAR which are placed at the approximate center of building polygons. Others are geocoded to the centerlines while the remainder are manually placed using the planimetrics and 2002 orthophoto as a guide.</horizpar>
+            </horizpa>
+        </posacc>
+        <posacc>
+            <vertacc>
+                <vertaccr>N/A</vertaccr>
+            </vertacc>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20050101</pubdate>
+                        <title>Underground Storage Tanks Excel Spreadsheet</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>Underground Storage Tanks Excel Spreadsheet</srccitea>
+                <srccontr>51 N Street, NE, 3rd Floor Washington, DC 20002 (202) 535-2525</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>Data recently completed by DCGIS was the Underground Storage Tank (UST) layer. In creating that DCGIS took data from DC Department of Health and mapped it. Upon review by DCStat staff, an issue concerning the addresses for UST licensees. The data are not tank locations, but rather licensee locations. The distinction is important for large facilities with multiple tanks. There are separate records or points for different types of material storage, but not for multiple tanks of the same material (i.e. 15 tanks collectively with four types of material would be four records, not 15). These may represent tanks with the same material scattered in different locations at a large facility like Fort McNair. Where possible, the UST point was moved to match the corresponding Master Address Repository (MAR) point. Multiple points for a single address were collected to that single point. This involved bringing the UST layer into ArcMap with a variety of other data layers useful for context: streets, buildings, MAR points, ownerpoints. Each UST point was reviewed and placed on the MAR point if one was available. No attempt was made to find actual tank locations, as this data lacks this level of precision.</procdesc>
+            </procstep>
+            <procstep>
+                <procdesc>An excel spreadsheet containing records for Underground Storage Tanks was evaluated and cleaned for geocoding. The address field for the data was run through an "Address Scrubber" to automatically fix spelling errors, abbreviations, and other anomalies to maximize successful geocodes. A second manual clean up was conducted for any records the Scrubber was unable to correct. The resulting output was placed into a new field so as not to loose any original information. The excell spreadsheet was exported to a dbf table and imported into ArcGIS 9.1 for geocoding. Any unmatched records were matched interactively with ESRI's geocoding tools. Tied records, usually arrising from similar addresses in two quadrants, were also reviewed and properly matched to corresponding quadrants. Any further remaining unmatched records were brought to the attention of an EHA appointed representative and reviewed in conjunction with a DC GIS team member. With EHA guidance, any remaining records were manually geocoded. Note: The locations points for the Underground Storage Tanks were placed on the Facility Site and not directly above the Tank's actual position on the site. For security reasons, Tank location points pertaining to Military, Federal or otherwise sensitive sites were geocoded to either front gates or the geographic center of the facility.</procdesc>
+            </procstep>
+            <procstep>
+                <procdesc>Staff updated data with new list from DOEE</procdesc>
+                <procdate>20200207</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>staff updated data with new list from DOEE</procdesc>
+                <procdate>20201120</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>added records that were research.</procdesc>
+                <procdate>20201204</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>New list from DOEE.</procdesc>
+                <procdate>20231201</procdate>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>Entity point</sdtstype>
+                <ptvctcnt>1699</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>DCGIS.LUSTPt</enttypl>
+                <enttypd>Underground Storage Tanks</enttypd>
+                <enttypds>EHA</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>STATUS</attrlabl>
+                <attrdef>Status of Underground Storage Tank</attrdef>
+                <attrdefs>DOEE</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>MEDIA_OF_CONTAMINATION</attrlabl>
+                <attrdef>Media of Contamination</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LATITUDE</attrlabl>
+                <attrdef>Latitude</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LONGITUDE</attrlabl>
+                <attrdef>Longitude</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>XCOORD</attrlabl>
+                <attrdef>X Coordinate</attrdef>
+                <attrdefs>OCTO</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>CLOSED_DATE</attrlabl>
+                <attrdef>Closed Date</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>YCOORD</attrlabl>
+                <attrdef>Y Coordinate</attrdef>
+                <attrdefs>OCOT</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ZIPCODE</attrlabl>
+                <attrdef>Zipcode</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>NOTIFIED_DATE</attrlabl>
+                <attrdef>Notified Date</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>STATUS</attrlabl>
+                <attrdef>Status</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>FACILITY_ID</attrlabl>
+                <attrdef>Facility Identifier</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>WARD</attrlabl>
+                <attrdef>Ward</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>COMPANY_NAME</attrlabl>
+                <attrdef>Company Name</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SITE_ADDRESS</attrlabl>
+                <attrdef>Site Address</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>QUADRANT</attrlabl>
+                <attrdef>Quadrant</attrdef>
+                <attrdefs>DOEE</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PRODUCT</attrlabl>
+                <attrdef>Product</attrdef>
+                <attrdefs>DOEE</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ACTIVE</attrlabl>
+                <attrdef>Active</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>MAR_ID</attrlabl>
+                <attrdef>Master Address Repository Identifier</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>FACILITY_TYPE</attrlabl>
+                <attrdef>Facility Type</attrdef>
+                <attrdefs>DOEE</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>VRAP_NUM</attrlabl>
+                <attrdef>VRAP Number</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>GIS_ID</attrlabl>
+                <attrdef>GIS Identifier</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>REGULATOR</attrlabl>
+                <attrdef>Regulator</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SE_ANNO_CAD_DATA</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>GLOBALID</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>CREATOR</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>CREATED</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>EDITOR</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>EDITED</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>EVENT_DATE</attrlabl>
+                <attrdef>Event Date</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>RECEPTOR</attrlabl>
+                <attrdef>Receptor</attrdef>
+                <attrdefs>DOEE</attrdefs>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <custom>DC datasets can be downloaded from "http://opendata.dc.gov".</custom>
+    </distinfo>
+    <metainfo>
+        <metd>20231130</metd>
+        <metrd>08/30/2005</metrd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

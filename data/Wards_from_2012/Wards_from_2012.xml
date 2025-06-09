@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20120128</pubdate>
+                <title>Wards from 2012</title>
+                <geoform>vector digital data</geoform>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>2012 Wards. The dataset contains polygons representing boundaries of District of Columbia 2012 election wards, created as part of the DC Geographic Information System (DC GIS) for the D.C. Office of the Chief Technology Officer (OCTO) and participating D.C. government agencies. The DC Office of Planning provided the boundaries to the DC GIS program.</abstract>
+            <purpose>The dataset contains polygons representing boundaries of District of Columbia 2012 election wards.</purpose>
+        </descript>
+        <status>
+            <progress>In work</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-77.11979289580876</westbc>
+                <eastbc>-76.90914770112504</eastbc>
+                <northbc>38.995960231436094</northbc>
+                <southbc>38.791636587312716</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>council</themekey>
+                <themekey>boundary</themekey>
+                <themekey>politics</themekey>
+                <themekey>wards</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>boundaries</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>Washington</placekey>
+                <placekey>DC</placekey>
+                <placekey>District of Columbia</placekey>
+            </place>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5:00 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>Office of Planning</datacred>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Validated by source and/or responsible agency.</attraccr>
+        </attracc>
+        <logic>Validated by source and/or responsible agency.</logic>
+        <complete>Validated by source and/or responsible agency.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>Features have been topologically matched to the snapbase where the boundary matched features such as rivers, shoreline, and street centerlines. OCTO took the Office of Planning digitized boundary in between parts that matched the snapbase.</horizpar>
+            </horizpa>
+        </posacc>
+        <posacc>
+            <vertacc>
+                <vertaccr>N/A</vertaccr>
+            </vertacc>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20110101</pubdate>
+                        <title>WARD REDISTRICTING AMENDMENT ACT OF 2011</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>hardcopyPaper</typesrc>
+                <srccitea>WARD REDISTRICTING AMENDMENT ACT OF 2011</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>The District Office of Planning updated the ward boundaries to reflect the revised legislation due to the 10 year redistricting effort. OCTO then took those snapped boundaries and selected snapbase feature, such as street centerlines and shoreline, where the boundaries overlapped. Two line files were formed, areas where the boundaries overlapped snapbase features and the original OLP boundary between the snapbase lines. Staff then merged the two layers together, constructed polygons, and appended the basic 2002 attributes to the layer. Note that these boundaries do split certain Census Blocks.</procdesc>
+                <procdate>20110907</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntpos>GIS Data Coordinator</cntpos>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                        </cntaddr>
+                        <cntvoice>(202) 727-2277</cntvoice>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5:00 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Staff updated Ward 4 Council member's information.</procdesc>
+                <procdate>20210108</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntpos>GIS Data Coordinator</cntpos>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                        </cntaddr>
+                        <cntvoice>(202) 727-2277</cntvoice>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5:00 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>GT-polygon composed of chains</sdtstype>
+                <ptvctcnt>0</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>WardPly</enttypl>
+                <enttypd>DC election wards</enttypd>
+                <enttypds>DC OCTO</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>NAME</attrlabl>
+                <attrdef>Name of the election ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>GIS_ID</attrlabl>
+                <attrdef>OCTO GIS sequential ID</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>WEB_URL</attrlabl>
+                <attrdef>Ward Councilmember website URL.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>Ward</attrlabl>
+                <attrdef>Ward number.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>REP_NAME</attrlabl>
+                <attrdef>Councilmember name.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>REP_PHONE</attrlabl>
+                <attrdef>Councilmember's office phone number.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>REP_EMAIL</attrlabl>
+                <attrdef>Councilmember email address.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AREASQMI</attrlabl>
+                <attrdef>Area of the ward in square miles.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>WARD_ID</attrlabl>
+                <attrdef>Ward number.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LABEL</attrlabl>
+                <attrdef>Name of the election ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_2000</attrlabl>
+                <attrdef>Ward population in the year 2000.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_2011_2015</attrlabl>
+                <attrdef>Estimated ward population in the year 2015.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_BLACK</attrlabl>
+                <attrdef>Black ward population in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_NATIVE_AMERICAN</attrlabl>
+                <attrdef>American Indian/Alaska Native ward population in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_ASIAN</attrlabl>
+                <attrdef>Asian ward population in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_HAWAIIAN</attrlabl>
+                <attrdef>Native Hawaiian/Pacific Islander ward population in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_OTHER_RACE</attrlabl>
+                <attrdef>Other race ward population in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>TWO_OR_MORE_RACES</attrlabl>
+                <attrdef>Two or more races ward population in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>NOT_HISPANIC_OR_LATINO</attrlabl>
+                <attrdef>Not Hispanic or Latino ward population in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>HISPANIC_OR_LATINO</attrlabl>
+                <attrdef>Hispanic or Latino ward population in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_MALE</attrlabl>
+                <attrdef>Male ward population in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_FEMALE</attrlabl>
+                <attrdef>Female ward population in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_0_5</attrlabl>
+                <attrdef>Ward population under age 5 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_5_9</attrlabl>
+                <attrdef>Ward population age 5 to 9 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_10_14</attrlabl>
+                <attrdef>Ward population age 10 to 14 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_15_17</attrlabl>
+                <attrdef>Ward population age 15 to 17 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_18_19</attrlabl>
+                <attrdef>Ward population age 18 and 19 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_20</attrlabl>
+                <attrdef>Ward population age 20 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_21</attrlabl>
+                <attrdef>Ward population age 21 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_22_24</attrlabl>
+                <attrdef>Ward population age 22 to 24 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_25_29</attrlabl>
+                <attrdef>Ward population age 25 to 29 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_30_34</attrlabl>
+                <attrdef>Ward population age 30 to 34 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_35_39</attrlabl>
+                <attrdef>Ward population age 35 to 39 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_40_44</attrlabl>
+                <attrdef>Ward population age 40 to 44 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_45_49</attrlabl>
+                <attrdef>Ward population age 45 to 49 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_50_54</attrlabl>
+                <attrdef>Ward population age 50 to 54 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_55_59</attrlabl>
+                <attrdef>Ward population age 55 to 59 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_60_61</attrlabl>
+                <attrdef>Ward population age 61 and 61 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_65_66</attrlabl>
+                <attrdef>Ward population age 65 and 66 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_67_69</attrlabl>
+                <attrdef>Ward population age 67 to 69 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_70_74</attrlabl>
+                <attrdef>Ward population age 70 to 74 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_75_79</attrlabl>
+                <attrdef>Ward population age 75 to 79 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_80_84</attrlabl>
+                <attrdef>Ward population age 80 to 84 years old in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>AGE_85_PLUS</attrlabl>
+                <attrdef>Ward population age 85 and over in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>MEDIAN_AGE</attrlabl>
+                <attrdef>Ward median age.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>UNEMPLOYMENT_RATE</attrlabl>
+                <attrdef>Ward unemployment rate.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>TOTAL_HH</attrlabl>
+                <attrdef>Total number of households in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>FAMILY_HH</attrlabl>
+                <attrdef>Total number of family households in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_FAMILY_HH</attrlabl>
+                <attrdef>Percent of households that are family households in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>NONFAMILY_HH</attrlabl>
+                <attrdef>Total number of nonfamily households in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_NONFAMILY_HH</attrlabl>
+                <attrdef>Percent of households that are nonfamily households in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_BELOW_POV</attrlabl>
+                <attrdef>Percent of all people in the ward living below the poverty level.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_BELOW_POV_FAM</attrlabl>
+                <attrdef>Percent of all families in the ward living below the poverty level.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_BELOW_POV_WHITE</attrlabl>
+                <attrdef>Percent of all white alone people in the ward living below the poverty level.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_BELOW_POV_BLACK</attrlabl>
+                <attrdef>Percent of all Black or African American alone people in the ward living below the poverty level.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_BELOW_POV_NAT_AMER</attrlabl>
+                <attrdef>Percent of all American Indian and Alaska Native people in the ward living below the poverty level.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_BELOW_POV_ASIAN</attrlabl>
+                <attrdef>Percent of all Asian alone people in the ward living below the poverty level.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_BELOW_POV_HAWAIIAN</attrlabl>
+                <attrdef>Percent of all Native Hawaiian and Other Pacific Islander alone people in the ward living below the poverty level.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_BELOW_POV_OTHER</attrlabl>
+                <attrdef>Percent of all some other race alone people in the ward living below the poverty level.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_BELOW_POV_TWO_RACES</attrlabl>
+                <attrdef>Percent of all two or more races people in the ward living below the poverty level.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_25_PLUS</attrlabl>
+                <attrdef>Population of persons 25 years and over in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_25_PLUS_9TH_GRADE</attrlabl>
+                <attrdef>Population of persons 25 years and over in the ward with less than 9th grade education.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_25_PLUS_GRADUATE</attrlabl>
+                <attrdef>Population of persons 25 years and over in the ward with a graduate or professional degree.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>MALE_HH_NO_WIFE</attrlabl>
+                <attrdef>Number of male householders with no wife present in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>FEMALE_HH_NO_HUSBAND</attrlabl>
+                <attrdef>Number of female householders with no husband present in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>MEDIAN_HH_INCOME</attrlabl>
+                <attrdef>Value of median household income (in dollars) in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PER_CAPITA_INCOME</attrlabl>
+                <attrdef>Value of per capita income (in dollars) in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_BELOW_POV_HISP</attrlabl>
+                <attrdef>Percent of population of Hispanic or Latino origin living below the poverty level in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PCT_BELOW_POV_WHTE_NOHISP</attrlabl>
+                <attrdef>Percent of white alone population (not of Hispanic or Latino origin) living below the poverty level in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>NO_DIPLOMA_25_PLUS</attrlabl>
+                <attrdef>Number of population 25 years and over in the ward who have some high school education but no diploma.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>DIPLOMA_25_PLUS</attrlabl>
+                <attrdef>Number of population 25 years and over in the ward who have a high school diploma.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>NO_DEGREE_25_PLUS</attrlabl>
+                <attrdef>Number of population 25 years and over in the ward who have some college education but no diploma.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ASSOC_DEGREE_25_PLUS</attrlabl>
+                <attrdef>Number of population 25 years and over in the ward who have an associate degree college education.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>BACH_DEGREE_25_PLUS</attrlabl>
+                <attrdef>Number of population 25 years and over in the ward who have an bachelors degree college education.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>MED_VAL_OOU</attrlabl>
+                <attrdef>Median value of owner-occupied housing units in the ward.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>POP_2010</attrlabl>
+                <attrdef>Ward population in the year 2010.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>REP_OFFICE</attrlabl>
+                <attrdef>Mailing address of Councilmember's office.</attrdef>
+                <attrdefs>DC OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE_Length</attrlabl>
+                <attrdef>Length of feature in internal units.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Positive real numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE_Area</attrlabl>
+                <attrdef>Area of feature in internal units squared.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Positive real numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5:00 pm</hours>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <custom>DC datasets can be downloaded from "https://opendata.dc.gov".</custom>
+    </distinfo>
+    <metainfo>
+        <metd>20210728</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5:00 pm</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

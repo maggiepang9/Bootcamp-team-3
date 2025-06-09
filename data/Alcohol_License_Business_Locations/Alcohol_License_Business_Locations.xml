@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20131004</pubdate>
+                <title>Liquor Licenses</title>
+                <geoform>vector digital data</geoform>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>The dataset contains locations and attributes of Liquor Licensees provided by the Alcoholic Beverage and Cannabis Administration (ABCA). For further information visit https://abca.dc.gov/. </abstract>
+            <purpose>Alcohol License Business Locations</purpose>
+        </descript>
+        <status>
+            <progress>Complete</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-77.106595</westbc>
+                <eastbc>-76.911244</eastbc>
+                <northbc>38.984149</northbc>
+                <southbc>38.820901</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>Liquor License</themekey>
+                <themekey>Alcoholic Beverage</themekey>
+                <themekey>Store</themekey>
+                <themekey>Alcohol</themekey>
+                <themekey>society</themekey>
+                <themekey>Licensee</themekey>
+                <themekey>Regulatory Affairs</themekey>
+                <themekey>Consumer</themekey>
+                <themekey>Business</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>society</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>DCGIS</placekey>
+                <placekey>Washington</placekey>
+                <placekey>D.C.</placekey>
+                <placekey>District of Columbia</placekey>
+                <placekey>DC</placekey>
+                <placekey>DC GIS</placekey>
+            </place>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Alcoholic Beverage and Cannabis Administration</cntorg>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>2000 14th Street, NW, Suite 400 S</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20009</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 442-4423</cntvoice>
+                <cntemail>abca@dc.gov</cntemail>
+                <hours>Monday to Friday, 8:30am to 4pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>Alcoholic Beverage and Cannabis Administration</datacred>
+        <native>Esri ArcGIS 13.2.0.49743</native>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. Validated by source and/or responsible agency.</attraccr>
+        </attracc>
+        <logic>In process of validation by source and/or responsible agency.</logic>
+        <complete>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. Validated by source and/or responsible agency.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>In process of validation by source and/or responsible agency. Matched to DC Master Address Repository (MAR) which positions points in the visual center of buildings.</horizpar>
+            </horizpa>
+        </posacc>
+        <posacc>
+            <vertacc>
+                <vertaccr>N/A</vertaccr>
+            </vertacc>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <title>ABC Licenses</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc>None</typesrc>
+                <srccitea>ABC Licenses</srccitea>
+                <srccontr>locations and attributes</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20020101</pubdate>
+                        <title>Metro Washington DC</title>
+                    </citeinfo>
+                </srccite>
+                <srcscale>24000</srcscale>
+                <typesrc>None</typesrc>
+                <srccitea>Metro Washington DC</srccitea>
+                <srccontr>location</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>DC GIS staff took the Alcoholic Beverage Regulation Administration (ABRA) Licenesee database and geocoded it to the Master Address Repository (MAR). Points that did not match to the MAR were researched and verified. In total, 1545 out of 1550 records geocoded.</procdesc>
+                <procdate>20100405</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Staff updated the dataset using the latest information on the ABRA website.</procdesc>
+                <procdate>20171215</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Staff updated the dataset using the latest information on the ABRA website.</procdesc>
+                <procdate>20180124</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Staff updated the dataset using the latest information from ABRA.</procdesc>
+                <procdate>20181116</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>unknown</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Staff updated the dataset using the latest information from ABRA.</procdesc>
+                <procdate>20190111</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>unknown</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Staff updated the dataset using the latest information from ABRA</procdesc>
+                <procdate>20190613</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Staff updated the dataset using  new list from ABRA.</procdesc>
+                <procdate>20191018</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Staff received new list from ABRA</procdesc>
+                <procdate>20200131</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Staff updated data with new list from Sept 14, 2020.</procdesc>
+                <procdate>20200918</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>updated list from ABRA</procdesc>
+                <procdate>20200918</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>staff updated data with new list from ABRA</procdesc>
+                <procdate>20201120</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Staff updated data with new list from ABRA</procdesc>
+                <procdate>20210430</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>update from ABRA.</procdesc>
+                <procdate>20220211</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>added 3/2022-8/2022 data.</procdesc>
+                <procdate>20220902</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>New list from ABRA</procdesc>
+                <procdate>20230203</procdate>
+            </procstep>
+            <procstep>
+                <procdesc>Data update from ABCA</procdesc>
+                <procdate>20231208</procdate>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>Entity point</sdtstype>
+                <ptvctcnt>2401</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>DCGIS.ABCALicenseePt</enttypl>
+                <enttypd>ABCA Alcohol License Locations</enttypd>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>MAR_ID</attrlabl>
+                <attrdef>Master Address Repository Identifier</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LICENSE</attrlabl>
+                <attrdef>ABRA License</attrdef>
+                <attrdefs>ABRA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>APPLICANT</attrlabl>
+                <attrdef>The person in whose name the license will be issued if the application is approved.</attrdef>
+                <attrdefs>ABRA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CLASS</attrlabl>
+                <attrdef>License Types</attrdef>
+                <attrdefs>ABRA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>TRADE_NAME</attrlabl>
+                <attrdef>Trade Name</attrdef>
+                <attrdefs>ABCA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ADDRESS</attrlabl>
+                <attrdef>Address</attrdef>
+                <attrdefs>ABCA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>BREW_PUB</attrlabl>
+                <attrdef>Brew Pub Permit</attrdef>
+                <attrdefs>ABRA</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Allows a restaurant, tavern, hotel, multipurpose facility, or nightclub to brew beer on or adjacent to the licensed premises and to sell the beer to patrons or wholesalers.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ENTERTAINMENT</attrlabl>
+                <attrdef>Entertainment Endorsement</attrdef>
+                <attrdefs>ABRA</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>There are three different types of entertainment endorsement categories that allow a licensee to either provide live entertainment, dancing, or charge a cover. Restaurants, taverns, hotels, and manufacturers that want to provide entertainment, dancing, or charge a cover can apply for one, two, or all three endorsement categories.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>XCOORD</attrlabl>
+                <attrdef>X Coordinate</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>YCOORD</attrlabl>
+                <attrdef>Y Coordinate</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SALES_CONSUMPTION</attrlabl>
+                <attrdef>Manufacturer's On-Site Sales and Consumption Permit</attrdef>
+                <attrdefs>ABRA</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Allows a spirit, beer, or wine manufacturer to sell the products it produces for consumption on the licensed premises.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SIDEWALK_CAFE</attrlabl>
+                <attrdef>Sidewalk Café Endorsement</attrdef>
+                <attrdefs>ABRA</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Allows a manufacturer holding an on-site sales and consumption permit, restaurant, tavern, multipurpose facility, hotel, or nightclub to sell, serve, and allow the consumption of alcoholic beverages on outdoor private or public space.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SUMMER_GARDEN</attrlabl>
+                <attrdef>Summer Garden Endorsement</attrdef>
+                <attrdefs>ABRA</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Allows a manufacturer holding an on-site sales and consumption permit, restaurant, tavern, multipurpose facility, hotel, or nightclub to sell, serve, and allow the consumption of alcoholic beverages on outdoor private or public space.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>TASTING</attrlabl>
+                <attrdef>Tasting Permit</attrdef>
+                <attrdefs>ABRA</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Allows a manufacturer, wholesaler, retailer, or private collector to provide product tastings on a portion of the licensed premises or licensed storage facility.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>WINE_PUB</attrlabl>
+                <attrdef>Wine Pub Permit</attrdef>
+                <attrdefs>ABRA</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Allows a restaurant, tavern, hotel, multipurpose faciltiy, or nightclub to manufacture wine on or adjacent to the licensed premises and to sell the wine to patrons or wholesalers.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>DISTILLERY_PUB</attrlabl>
+                <attrdef>Distillery Pub Permit</attrdef>
+                <attrdefs>ABRA</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Allows a restaurant, tavern, hotel, multipurpose facility, or nightclub to distill spirits on or adjacent to licensed premises and to sell the spirits to patrons and wholesalers.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>STATUS</attrlabl>
+                <attrdef>License Status</attrdef>
+                <attrdefs>ABRA</attrdefs>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>Safekeeping</edomv>
+                                                
+                        <edomvd>A license would need to be put into safekeeping if the business is not currently operating.</edomvd>
+                                                
+                        <edomvds>ABRA</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>404.2 Status</edomv>
+                                                
+                        <edomvd>Allows an applicant to obtain approval of the application prior to the issuance of all licenses and permits so long as the applicant has obtained a Certificate of Occupancy. Applicates must apply for 404.2 status.</edomvd>
+                                                
+                        <edomvds>ABRA</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>405.1 Status</edomv>
+                                                
+                        <edomvd>Allows an applicant to obtain approval of a license prior to receiving the Certificate of Occupancy. Applicants must apply for 405.1 status.</edomvd>
+                                                
+                        <edomvds>ABRA</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>No Substantial Change</edomv>
+                                                
+                        <edomvd>Applies if a license is being transferred to a new owner and no changes are being made to the business.</edomvd>
+                                                
+                        <edomvds>ABRA</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>Substantial Change</edomv>
+                                                
+                        <edomvd>Applies if a license is being transferred to a new owner and changes are being made to the business.</edomvd>
+                                                
+                        <edomvds>ABRA</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+                <attrdomv>
+                                        
+                    <edom>
+                                                
+                        <edomv>Active</edomv>
+                                                
+                        <edomvd>Active License</edomvd>
+                                                
+                        <edomvds>ABRA</edomvds>
+                                            
+                    </edom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>TYPE</attrlabl>
+                <attrdef>Establishment Type</attrdef>
+                <attrdefs>ABRA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>WARD</attrlabl>
+                <attrdef>Ward</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ZIPCODE</attrlabl>
+                <attrdef>US Postal Service Zipcode</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SMD</attrlabl>
+                <attrdef>Single Member District</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>ANC</attrlabl>
+                <attrdef>Advisory Neighborhood Commission</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>COVERCHARGE</attrlabl>
+                <attrdef>Charge a cover for admission</attrdef>
+                <attrdefs>ABRA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>DANCING</attrlabl>
+                <attrdef>Provide dancing facilities</attrdef>
+                <attrdefs>ABRA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>OFFPREMISESTORAGE</attrlabl>
+                <attrdef>Off Premise Storage</attrdef>
+                <attrdefs>ABCA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>STORAGEFACILITY</attrlabl>
+                <attrdef>Storage Facility</attrdef>
+                <attrdefs>ABCA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        
+                    <udom>Coordinates defining the features.</udom>
+                                    
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>LONGITUDE</attrlabl>
+                <attrdef>Longitude</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LATITUDE</attrlabl>
+                <attrdef>Latitude</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>TOTAL_CAPACITY</attrlabl>
+                <attrdef>Total Capacity</attrdef>
+                <attrdefs>ABCA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>GAMES_OF_SKILL</attrlabl>
+                <attrdef>Games of Skill</attrdef>
+                <attrdefs>ABCA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>GIS_ID</attrlabl>
+                <attrdef>GIS Identifier</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CARRYOUT_DELIVERY</attrlabl>
+                <attrdef>Carryout/Delivery</attrdef>
+                <attrdefs>ABCA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SE_ANNO_CAD_DATA</attrlabl>
+                <attrdef>Internal database field</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>GLOBALID</attrlabl>
+                <attrdef>Global Identifier</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CREATOR</attrlabl>
+                <attrdef>Creator</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CREATED</attrlabl>
+                <attrdef>Created</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>EDITOR</attrlabl>
+                <attrdef>Editor</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>EDITED</attrlabl>
+                <attrdef>Edited</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SPORTS_WAGGERING</attrlabl>
+                <attrdef>Sports Wagering</attrdef>
+                <attrdefs>ABCA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>STREATERY</attrlabl>
+                <attrdef>Streatery</attrdef>
+                <attrdefs>ABCA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>EXPIRATION_DATE</attrlabl>
+                <attrdef>Expiration Date</attrdef>
+                <attrdefs>ABCA</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CO_CAPACITY</attrlabl>
+                <attrdef>Certificate of Occupancy Capacity</attrdef>
+                <attrdefs>ABCA</attrdefs>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <custom>DC datasets can be downloaded from "http://opendata.dc.gov".</custom>
+    </distinfo>
+    <metainfo>
+        <metd>20240805</metd>
+        <metrd>07/17/06</metrd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Office of the Chief Technology Officer</cntorg>
+                </cntorgp>
+                <cntpos>GIS Data Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(202) 727-2277</cntvoice>
+                <cntfax>(202) 727-6857</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
