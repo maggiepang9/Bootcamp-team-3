@@ -1,0 +1,212 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+library(tidyverse)
+library(sf)
+library(sp)
+library(tigris)
+options(tigris_use_cache = T)
+```
+
+# Read in all files
+
+```{r}
+file_list = list.files("./data/", pattern = ".shp", full.names = T, recursive = T)
+data_list <- set_names(file_list, basename(file_list)) %>%
+  map(st_read, quiet = T)
+```
+
+```{r}
+data_names = names(data_list[-2])
+for(i in 1:length(data_list[-2])) {
+  print(data_names[i])
+  print(names(data_list[-2][[i]]))
+}
+```
+
+# Point-Tract Intersection
+
+```{r}
+dc_tracts = tracts(state = "DC", year = 2022, cb = T)
+```
+
+```{r}
+  # df = data_list[[4]]
+  # df = st_transform(df, crs = st_crs(dc_tracts))
+  # df_clean = drop_na(df, "geometry")
+  # df_joined = st_join(df_clean, dc_tracts, join = st_within)
+  # df_aggregated <- df_joined %>%
+  # st_drop_geometry() %>%
+  # group_by(GEOID) %>%
+  # summarise(TRACT_COUNT = n())
+  # 
+  # # Join result back to polygon geometry
+  # df_areal <- left_join(dc_tracts, df_aggregated, by = "GEOID")
+  # out <- df_areal
+```
+
+```{r}
+get_within = function(df_list, tracts){
+  
+  df_names = names(df_list)
+  crs_transform = st_crs(tracts)
+  
+  for(i in 1:length(df_list)) {
+    df = df_list[[i]]
+    df = st_transform(df, crs = crs_transform)
+    df_clean = drop_na(df, "geometry")
+    
+    try({
+    df_joined = st_join(df_clean, tracts, join = st_within)
+    df_aggregated <- df_joined %>%
+    st_drop_geometry() %>%
+    group_by(GEOID) %>%
+    summarise(!!paste("TRACT_COUNT",
+                    substr(df_names[i], start = 1, stop = 10),
+                    sep = "_") := n())
+    
+    # Join result back to polygon geometry
+    df <- left_join(tracts, df_aggregated, by = "GEOID")
+    print(df_names[i])
+    })
+    df_list[[i]] <- df
+  }
+  return(df_list)
+}
+```
+
+```{r}
+get_intersect = function(df_list, tracts){
+  
+  df_names = names(df_list)
+  crs_transform = st_crs(tracts)
+  
+  for(i in 1:length(df_list)) {
+    df = st_make_valid(df_list[[i]])
+    df = st_transform(df, crs = crs_transform)
+    df_clean = drop_na(df, "geometry")
+    
+    try({
+    df_joined = st_join(df_clean, tracts, join = st_intersects)
+    })
+    df_list[[i]] <- df_joined
+  }
+  return(df_list)
+}
+```
+
+```{r}
+get_intersection = function(df_list, tracts){
+  
+  df_names = names(df_list)
+  crs_transform = st_crs(tracts)
+  
+  for(i in 1:length(df_list)) {
+    df = st_make_valid(df_list[[i]])
+    df = st_transform(df, crs = crs_transform)
+    df_clean = drop_na(df, "geometry")
+    
+    try({
+    df_joined = st_join(df_clean, tracts, join = st_intersection)
+    tracts$orig_area = st_area(tracts)
+    df_joined$int_area = st_area(df_joined)
+    df_joined = df_joined %>% 
+      left_join(st_drop_geometry(dc_tracts)[, c("GEOID", "orig_area")], by = "GEOID") 
+    
+    df_joined$PROP_AERA = as.numeric(df_joined$int_area / df_joined$orig_area)
+    })
+    df_list[[i]] <- df_joined
+  }
+  return(df_list)
+}
+```
+
+```{r}
+data_list_within = get_within(data_list[c(1,4,5,7,8,10,12:15,17)], dc_tracts)
+data_list_intersect = get_intersect(data_list[c(3, 6, 9, 11, 16)], dc_tracts)
+data_list_intersection = get_intersection(data_list[c(3, 6, 9, 11, 16)], dc_tracts)
+```
+
+```{r}
+## Flood Plain Data
+flood_aggregated = data_list_intersect$Floodplain_Base_Flood_Elevations.shp %>%
+  st_drop_geometry() %>%
+  group_by(GEOID) %>%
+  summarise(MEAN_ELEV = mean(ELEV), MED_ELEV = median(ELEV)) %>%
+  select(c(GEOID, MEAN_ELEV, MED_ELEV))
+  
+## Hospital Areas Data
+hospital_aggregated = data_list_intersect$Hospital_Areas.shp %>%
+  st_drop_geometry() %>%
+  group_by(GEOID) %>%
+  summarise(MEAN_ELEV = mean(ELEV), MED_ELEV = median(ELEV)) %>%
+  select(c(GEOID, ))
+data_list_intersect$Hospital_Areas.shp = left_join(dc_tracts, hospital_aggregated, by = "GEOID")
+```
+
+# Places, EJI Screen, and Built Enviornment
+
+## Places Dataset
+
+```{r}
+places = read_csv("./data/cdc_places_dc.csv", show_col_types = F)
+places_tibble = as_tibble(places) |> 
+  group_by(Year, LocationName,LocationID) %>%
+  select(c(Year, LocationName, LocationID, Data_Value, MeasureId, TotalPopulation, TotalPop18plus, Geolocation)) %>%
+  pivot_wider(names_from = MeasureId, values_from = Data_Value)
+places = places_tibble %>% ungroup() %>% filter(Year == 2022) %>% select(!c("LocationID", "Year")) %>% rename(geoid = LocationName)
+summary(places)
+
+
+places = places %>% 
+  select(c(geoid, TotalPopulation, DIABETES, CASTHMA)) %>%
+  rename(GEOID = geoid) %>%
+  mutate(GEOID = as.character(GEOID))
+```
+
+## EJI Screen Dataset
+
+```{r}
+eji = read_csv("./data/ejiscreen_dc.csv", show_col_types = F)
+eji = as_tibble(eji)
+head(eji)
+```
+
+## Built Environment Dataset
+
+```{r}
+built = data_list[[2]]
+summary(built)
+
+
+built = built %>% 
+  select(c(GEOID, 
+           m1_1_schoo, m1_2_quali, 
+           m1_1_sch_1, m1_2_qua_1)) %>%
+  st_drop_geometry()
+```
+
+# Join SF Data Frames
+
+```{r}
+## Join Places and Built Environment
+data_combined = places %>%
+  left_join(built, by = "GEOID")
+
+## Join Within Data
+for(i in 1:length(data_list_within)){
+  new_data = data_list_within[[i]] %>%
+              st_drop_geometry() %>%
+              select(GEOID, contains("TRACT_COUNT"))
+  data_combined = left_join(data_combined, new_data)
+}
+
+## Join Intersect Data
+data_combined = left_join(data_combined, flood_aggregated)
+
+```
+
