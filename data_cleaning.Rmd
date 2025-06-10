@@ -327,6 +327,32 @@ places = places %>%
 eji = read_csv("./data/ejiscreen_dc.csv", show_col_types = F)
 eji = as_tibble(eji)
 head(eji)
+names(eji)
+
+eji = eji %>% 
+  select(c(ID, LOWINCOME, LOWINCPCT, UNEMPLOYED, UNEMPPCT)) %>%
+  mutate(GEOID = as.character(ID), .before = ID) %>%
+  select(-c(ID))
+```
+
+## Crime Data
+
+```{r}
+crime = read_csv("./data/dc_tract_crime_burden.csv", show_col_types = F) 
+
+crime = crime %>%
+  mutate(GEOID = as.character(GEOID))
+```
+
+## Pharmacy Data
+
+```{r}
+pharma = read_csv("./data/pharmacy_access_by_tract_with_distance_and_percentile.csv",
+                  show_col_types = F)
+
+pharma = pharma %>%
+  mutate(GEOID := paste("11001", TRACT, sep = ""), .before = TRACT) %>%
+  select(-c(TRACT, total_population))
 ```
 
 ## Built Environment Dataset
@@ -348,7 +374,10 @@ built = built %>%
 ```{r}
 ## Join Places and Built Environment
 data_combined = places %>%
-  left_join(built, by = "GEOID")
+  left_join(built, by = "GEOID") %>%
+  left_join(crime, by = "GEOID") %>%
+  left_join(pharma, by = "GEOID") %>%
+  left_join(eji, by = "GEOID")
 
 ## Join Within Data
 for(i in 1:length(data_list_within)){
@@ -370,7 +399,9 @@ for(i in 1:length(data_list_proximity)){
 for(i in 1:(length(data_list_intersect))){
   new_data = data_list_intersect[[i]] %>%
               st_drop_geometry() %>%
-              select(GEOID, contains("TRACT_"))
+              select(GEOID, contains("TRACT_")) %>%
+              group_by(GEOID) %>%
+              summarise(across(everything(), sum))
   data_combined = left_join(data_combined, new_data)
 }
 
@@ -378,7 +409,9 @@ for(i in 1:(length(data_list_intersect))){
 data_final = data_combined %>%
   mutate(across(everything(), ~ replace_na(., 0))) %>%
   select(-c(5, 6)) %>%
-  mutate(across(c(TotalPopulation:CASTHMA, TRACT_COUNT_Alcohol_Li:TRACT_COUNT_Public_House), percent_rank))
+  mutate(across(c(TotalPopulation:CASTHMA,
+                  LOWINCPCT, UNEMPPCT,
+                  TRACT_COUNT_Alcohol_Li:TRACT_COUNT_Public_House), percent_rank))
 
 # data_final = data_final %>%
 #   left_join(dc_tracts %>% select(GEOID, geometry), by = "GEOID")
