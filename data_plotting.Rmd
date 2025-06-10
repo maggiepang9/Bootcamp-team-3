@@ -1,0 +1,38 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+library(tidyverse)
+library(sf)
+library(sp)
+library(viridis)
+library(tigris)
+options(tigris_use_cache = T)
+```
+
+# Load Data and Add Census Tracts
+
+```{r}
+df = read_csv("Final_Cleaned_Data.csv", col_types = cols(GEOID = "c"))
+dc_tracts = tracts(state = "DC", cb = T, year = 2022)
+
+df = left_join(df, dc_tracts %>%
+                 select(c(GEOID, geometry, ALAND, AWATER)), by = "GEOID")
+```
+
+# Plot Data
+
+```{r}
+ggplot(data = df) + 
+  geom_sf(aes(geometry = geometry, fill = TotalPopulation), color = NA) + 
+  scale_fill_viridis(alpha = 0.8) +
+  labs(title = "Plot of Total Population", 
+       subtitle = "Percentile",
+       y = "Longitude", x = "Latitude",
+       fill = "Total Population")
+```
+
+
