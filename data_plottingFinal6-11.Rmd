@@ -1,0 +1,136 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+library(tidyverse)
+library(sf)
+library(sp)
+library(viridis)
+library(tigris)
+options(tigris_use_cache = T)
+```
+
+# Load Data and Add Census Tracts
+
+```{r}
+df = read_csv("Final_Cleaned_Data.csv", col_types = cols(GEOID = "c"))
+dc_tracts = tracts(state = "DC", cb = T, year = 2022)
+
+df = left_join(df, dc_tracts %>%
+                 select(c(GEOID, geometry, ALAND, AWATER)), by = "GEOID")
+```
+
+```{r}
+names(df)
+```
+
+# Plot Data
+```{r}
+plot_df = df %>%
+  select(c(GEOID, geometry,
+   DIABETES )) 
+# %>% mutate(dist_to_m_Independen = (1 / (dist_to_m_Independen + 0.001)))
+   #%>% mutate(TRACT_COUNT_Food_Access = 1 -TRACT_COUNT_Food_Access, TRACT_COUNT_Alcohol_Li = 1 - TRACT_COUNT_Alcohol_Li  ) #Inverting the Index
+
+ggplot(data = plot_df) + 
+  geom_sf(aes(geometry = geometry, fill = 
+                 rowMeans(select(plot_df, c(DIABETES)))
+               # dist_to_m_Healthy_Co,dist_to_m_Grocery_St,
+                ), color = NA) + 
+  scale_fill_viridis(alpha = 0.8) +
+  labs(title = "Diabetes Prevalence ", 
+       subtitle = "Percentile",
+       y = "Longitude", x = "Latitude",
+       fill = " Diabetes Prevalence  ")
+
+ggsave("./PlotsFinal/Diabetes Prevalence .png")
+```
+
+```{r}
+plot_df = df %>%
+  select(c(GEOID, geometry,
+    TRACT_COUNT_Alcohol_Li,TRACT_COUNT_Food_Access,dist_to_m_Healthy_Co,dist_to_m_Grocery_St  )) 
+# %>% mutate(dist_to_m_Independen = (1 / (dist_to_m_Independen + 0.001)))
+   %>% mutate(TRACT_COUNT_Food_Access = 1 -TRACT_COUNT_Food_Access, TRACT_COUNT_Alcohol_Li = 1 - TRACT_COUNT_Alcohol_Li  ) #Inverting the Index
+
+ggplot(data = plot_df) + 
+  geom_sf(aes(geometry = geometry, fill = 
+                 rowMeans(select(plot_df, c(TRACT_COUNT_Alcohol_Li,TRACT_COUNT_Food_Access,dist_to_m_Healthy_Co,dist_to_m_Grocery_St)))
+               # dist_to_m_Healthy_Co,dist_to_m_Grocery_St,
+                ), color = NA) + 
+  scale_fill_viridis(alpha = 0.8) +
+  labs(title = "Driver 6: Food Enviroment ", 
+       subtitle = "Percentile",
+       y = "Longitude", x = "Latitude",
+       fill = " Driver 6: Food Enviroment  ")
+
+ggsave("./PlotsFinal/Driver 6- Food Enviroment  .png")
+```
+
+```{r}
+plot_df = df %>%
+  select(c(GEOID, geometry,
+   dist_to_m_Primary_Ca, weighted_mean_percentile, TRACT_COUNT_Hospital )) %>%
+# %>% mutate(dist_to_m_Independen = (1 / (dist_to_m_Independen + 0.001)))
+ mutate(TRACT_COUNT_Hospital = 1 - TRACT_COUNT_Hospital) %>%
+ mutate(weighted_mean_percentile = weighted_mean_percentile/100) #Inverting the Index
+
+ggplot(data = plot_df) + 
+  geom_sf(aes(geometry = geometry, fill = 
+                 rowMeans(select(plot_df, c(dist_to_m_Primary_Ca,weighted_mean_percentile, TRACT_COUNT_Hospital)))
+               # dist_to_m_Healthy_Co,dist_to_m_Grocery_St,
+                ), color = NA) + 
+  scale_fill_viridis(alpha = 0.8) +
+  labs(title = "Driver 7: Medical Care ", 
+       subtitle = "Percentile",
+       y = "Longitude", x = "Latitude",
+       fill = " Driver 7: Medical Care")
+
+ggsave("./PlotsFinal/Driver 7- Medical Care .png")
+```
+
+```{r}
+plot_df = df %>%
+  select(c(GEOID, geometry,
+   dist_to_m_Recreation,dist_to_m_Parks_and_, TRACT_COUNT_Leaking_Un )) 
+# %>% mutate(dist_to_m_Independen = (1 / (dist_to_m_Independen + 0.001)))
+   %>% mutate(TRACT_COUNT_Leaking_Un = 1 -TRACT_COUNT_Leaking_Un, TRACT_MEAN_ELEV = 1 -TRACT_MEAN_ELEV) #Inverting the Index
+
+ggplot(data = plot_df) + 
+  geom_sf(aes(geometry = geometry, fill = 
+                 rowMeans(select(plot_df, c(dist_to_m_Recreation,dist_to_m_Parks_and_, TRACT_COUNT_Leaking_Un)))
+               # dist_to_m_Healthy_Co,dist_to_m_Grocery_St,
+                ), color = NA) + 
+  scale_fill_viridis(alpha = 0.8) +
+  labs(title = "Driver 8: Outdoor Environment ", 
+       subtitle = "Percentile",
+       y = "Longitude", x = "Latitude",
+       fill = " Driver 8: Outdoor Environment ")
+
+ggsave("./PlotsFinal/Driver 8- Outdoor Environment .png")
+```
+
+```{r}
+plot_df = df %>%
+  select(c(GEOID, geometry,
+    dist_to_m_Police_Sta,percentile)) 
+# %>% mutate(dist_to_m_Independen = (1 / (dist_to_m_Independen + 0.001)))
+   #%>% mutate(TRACT_COUNT_Food_Access = 1 -TRACT_COUNT_Food_Access, TRACT_COUNT_Alcohol_Li = 1 - TRACT_COUNT_Alcohol_Li  ) #Inverting the Index
+
+ggplot(data = plot_df) + 
+  geom_sf(aes(geometry = geometry, fill = 
+                 rowMeans(select(plot_df, c(dist_to_m_Police_Sta,percentile)))
+               # dist_to_m_Healthy_Co,dist_to_m_Grocery_St,
+                ), color = NA) + 
+  scale_fill_viridis(alpha = 0.8) +
+  labs(title = "Driver 9: Community Safety ", 
+       subtitle = "Percentile",
+       y = "Longitude", x = "Latitude",
+       fill = " Driver 9: Community Safety   ")
+
+ggsave("./PlotsFinal/Driver 9- Community Safety  .png")
+```
+
