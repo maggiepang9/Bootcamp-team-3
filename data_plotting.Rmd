@@ -36,3 +36,16 @@ ggplot(data = df) +
 ```
 
 
+
+```{r}
+names = names(df[, -c(1, ncol(df))])
+for(i in 1:(ncol(df) - 2)) {
+  plot = ggplot(data = df) +
+    geom_sf(aes(geometry = geometry, fill = !!sym(names[i])), col = NA) + 
+    scale_fill_viridis(alpha = 0.9) + 
+    labs(x = "Latitude", y = "Longitude",
+         title = paste("Plot of", names[i]),
+         subtitle = "Percentile")
+  ggsave(plot = plot, paste("./plots/", names[i], ".png", sep = ""))
+}
+```

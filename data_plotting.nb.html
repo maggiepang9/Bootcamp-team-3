@@ -1793,9 +1793,66 @@ dc_tracts = tracts(state = &quot;DC&quot;, cb = T, year = 2022)</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMgPSBuYW1lcyhkZlssIC1jKDEsIG5jb2woZGYpKV0pXG5mb3IoaSBpbiAxOihuY29sKGRmKSAtIDIpKSB7XG4gIHBsb3QgPSBnZ3Bsb3QoZGF0YSA9IGRmKSArXG4gICAgZ2VvbV9zZihhZXMoZ2VvbWV0cnkgPSBnZW9tZXRyeSwgZmlsbCA9ICEhc3ltKG5hbWVzW2ldKSksIGNvbCA9IE5BKSArIFxuICAgIHNjYWxlX2ZpbGxfdmlyaWRpcyhhbHBoYSA9IDAuOSkgKyBcbiAgICBsYWJzKHggPSBcIkxhdGl0dWRlXCIsIHkgPSBcIkxvbmdpdHVkZVwiLFxuICAgICAgICAgdGl0bGUgPSBwYXN0ZShcIlBsb3Qgb2ZcIiwgbmFtZXNbaV0pLFxuICAgICAgICAgc3VidGl0bGUgPSBcIlBlcmNlbnRpbGVcIilcbiAgZ2dzYXZlKHBsb3QgPSBwbG90LCBwYXN0ZShcIi4vcGxvdHMvXCIsIG5hbWVzW2ldLCBcIi5wbmdcIiwgc2VwID0gXCJcIikpXG59XG5gYGAifQ== -->
+<pre class="r"><code>names = names(df[, -c(1, ncol(df))])
+for(i in 1:(ncol(df) - 2)) {
+  plot = ggplot(data = df) +
+    geom_sf(aes(geometry = geometry, fill = !!sym(names[i])), col = NA) + 
+    scale_fill_viridis(alpha = 0.9) + 
+    labs(x = &quot;Latitude&quot;, y = &quot;Longitude&quot;,
+         title = paste(&quot;Plot of&quot;, names[i]),
+         subtitle = &quot;Percentile&quot;)
+  ggsave(plot = plot, paste(&quot;./plots/&quot;, names[i], &quot;.png&quot;, sep = &quot;&quot;))
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcblNhdmluZyA3IHggNyBpbiBpbWFnZVxuU2F2aW5nIDcgeCA3IGluIGltYWdlXG5TYXZpbmcgNyB4IDcgaW4gaW1hZ2VcbiJ9 -->
+<pre><code>Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+Saving 7 x 7 in image</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCmxpYnJhcnkocmVhZHIpDQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCmxpYnJhcnkoc2YpDQpsaWJyYXJ5KHNwKQ0KbGlicmFyeSh2aXJpZGlzKQ0KbGlicmFyeSh0aWdyaXMpDQpvcHRpb25zKHRpZ3Jpc191c2VfY2FjaGUgPSBUKQ0KYGBgDQoNCiMgTG9hZCBEYXRhIGFuZCBBZGQgQ2Vuc3VzIFRyYWN0cw0KDQpgYGB7cn0NCmRmID0gcmVhZF9jc3YoIkZpbmFsX0NsZWFuZWRfRGF0YS5jc3YiLCBjb2xfdHlwZXMgPSBjb2xzKEdFT0lEID0gImMiKSkNCmRjX3RyYWN0cyA9IHRyYWN0cyhzdGF0ZSA9ICJEQyIsIGNiID0gVCwgeWVhciA9IDIwMjIpDQoNCmRmID0gbGVmdF9qb2luKGRmLCBkY190cmFjdHMgJT4lDQogICAgICAgICAgICAgICAgIHNlbGVjdChjKEdFT0lELCBnZW9tZXRyeSwgQUxBTkQsIEFXQVRFUikpLCBieSA9ICJHRU9JRCIpDQpgYGANCg0KIyBQbG90IERhdGENCg0KYGBge3J9DQpnZ3Bsb3QoZGF0YSA9IGRmKSArIA0KICBnZW9tX3NmKGFlcyhnZW9tZXRyeSA9IGdlb21ldHJ5LCBmaWxsID0gVG90YWxQb3B1bGF0aW9uKSwgY29sb3IgPSBOQSkgKyANCiAgc2NhbGVfZmlsbF92aXJpZGlzKGFscGhhID0gMC44KSArDQogIGxhYnModGl0bGUgPSAiUGxvdCBvZiBUb3RhbCBQb3B1bGF0aW9uIiwgDQogICAgICAgc3VidGl0bGUgPSAiUGVyY2VudGlsZSIsDQogICAgICAgeSA9ICJMb25naXR1ZGUiLCB4ID0gIkxhdGl0dWRlIiwNCiAgICAgICBmaWxsID0gIlRvdGFsIFBvcHVsYXRpb24iKQ0KYGBgDQoNCg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCmxpYnJhcnkocmVhZHIpDQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCmxpYnJhcnkoc2YpDQpsaWJyYXJ5KHNwKQ0KbGlicmFyeSh2aXJpZGlzKQ0KbGlicmFyeSh0aWdyaXMpDQpvcHRpb25zKHRpZ3Jpc191c2VfY2FjaGUgPSBUKQ0KYGBgDQoNCiMgTG9hZCBEYXRhIGFuZCBBZGQgQ2Vuc3VzIFRyYWN0cw0KDQpgYGB7cn0NCmRmID0gcmVhZF9jc3YoIkZpbmFsX0NsZWFuZWRfRGF0YS5jc3YiLCBjb2xfdHlwZXMgPSBjb2xzKEdFT0lEID0gImMiKSkNCmRjX3RyYWN0cyA9IHRyYWN0cyhzdGF0ZSA9ICJEQyIsIGNiID0gVCwgeWVhciA9IDIwMjIpDQoNCmRmID0gbGVmdF9qb2luKGRmLCBkY190cmFjdHMgJT4lDQogICAgICAgICAgICAgICAgIHNlbGVjdChjKEdFT0lELCBnZW9tZXRyeSwgQUxBTkQsIEFXQVRFUikpLCBieSA9ICJHRU9JRCIpDQpgYGANCg0KIyBQbG90IERhdGENCg0KYGBge3J9DQpnZ3Bsb3QoZGF0YSA9IGRmKSArIA0KICBnZW9tX3NmKGFlcyhnZW9tZXRyeSA9IGdlb21ldHJ5LCBmaWxsID0gVG90YWxQb3B1bGF0aW9uKSwgY29sb3IgPSBOQSkgKyANCiAgc2NhbGVfZmlsbF92aXJpZGlzKGFscGhhID0gMC44KSArDQogIGxhYnModGl0bGUgPSAiUGxvdCBvZiBUb3RhbCBQb3B1bGF0aW9uIiwgDQogICAgICAgc3VidGl0bGUgPSAiUGVyY2VudGlsZSIsDQogICAgICAgeSA9ICJMb25naXR1ZGUiLCB4ID0gIkxhdGl0dWRlIiwNCiAgICAgICBmaWxsID0gIlRvdGFsIFBvcHVsYXRpb24iKQ0KYGBgDQoNCg0KDQpgYGB7cn0NCm5hbWVzID0gbmFtZXMoZGZbLCAtYygxLCBuY29sKGRmKSldKQ0KZm9yKGkgaW4gMToobmNvbChkZikgLSAyKSkgew0KICBwbG90ID0gZ2dwbG90KGRhdGEgPSBkZikgKw0KICAgIGdlb21fc2YoYWVzKGdlb21ldHJ5ID0gZ2VvbWV0cnksIGZpbGwgPSAhIXN5bShuYW1lc1tpXSkpLCBjb2wgPSBOQSkgKyANCiAgICBzY2FsZV9maWxsX3ZpcmlkaXMoYWxwaGEgPSAwLjkpICsgDQogICAgbGFicyh4ID0gIkxhdGl0dWRlIiwgeSA9ICJMb25naXR1ZGUiLA0KICAgICAgICAgdGl0bGUgPSBwYXN0ZSgiUGxvdCBvZiIsIG5hbWVzW2ldKSwNCiAgICAgICAgIHN1YnRpdGxlID0gIlBlcmNlbnRpbGUiKQ0KICBnZ3NhdmUocGxvdCA9IHBsb3QsIHBhc3RlKCIuL3Bsb3RzLyIsIG5hbWVzW2ldLCAiLnBuZyIsIHNlcCA9ICIiKSkNCn0NCmBgYA0K</div>
 
 
 
