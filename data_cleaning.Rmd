@@ -275,7 +275,8 @@ flood_aggregated = data_list_intersect$Floodplain_Base_Flood_Elevations.shp %>%
   group_by(GEOID) %>%
   summarise(TRACT_MEAN_ELEV = mean(ELEV), TRACT_MED_ELEV = median(ELEV)) %>%
   select(c(GEOID, TRACT_MEAN_ELEV, TRACT_MED_ELEV))
-  
+data_list_intersect$Floodplain_Base_Flood_Elevations.shp = left_join(dc_tracts, flood_aggregated, by = "GEOID")  
+
 ## Hospital Areas Data
 hospital_aggregated = data_list_intersect$Hospital_Areas.shp %>%
   st_drop_geometry() %>%
