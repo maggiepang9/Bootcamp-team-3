@@ -23,19 +23,45 @@ df = left_join(df, dc_tracts %>%
                  select(c(GEOID, geometry, ALAND, AWATER)), by = "GEOID")
 ```
 
+```{r}
+summary(df)
+```
+
+```{r}
+df_sf = st_as_sf(df)
+df_sf$centroids = st_centroid(df_sf$geometry)
+```
+
 # Plot Data
 
 ```{r}
-ggplot(data = df) + 
-  geom_sf(aes(geometry = geometry, fill = TotalPopulation), color = NA) + 
-  scale_fill_viridis(alpha = 0.8) +
-  labs(title = "Plot of Total Population", 
+ggplot(data = df_sf) + 
+  geom_sf(aes(geometry = geometry, fill = dist_to_m_Metro_Stat), color = NA) + 
+  geom_sf(aes(geometry = centroids, size = CASTHMA), color = "black", alpha = 0.4) + 
+  scale_fill_viridis(alpha = 0.9) +
+  labs(title = "Plot of Distance to Metro Stations", 
        subtitle = "Percentile",
        y = "Longitude", x = "Latitude",
-       fill = "Total Population")
+       fill = "Distance",
+       size = "Asthma")
 ```
 
+```{r}
+library(plotly)
+p = ggplot(data = df_sf) + 
+  geom_sf(aes(geometry = geometry, fill = dist_to_m_Metro_Stat), color = NA) + 
+  geom_sf(aes(geometry = centroids, size = CASTHMA), color = "black", alpha = 0.4) + 
+  scale_fill_viridis(alpha = 0.9) +
+  labs(title = "Plot of Distance to Metro Stations", 
+       subtitle = "Percentile",
+       y = "Longitude", x = "Latitude",
+       fill = "Distance",
+       size = "Asthma")
 
+ggplotly(p)
+```
+
+## Plot Individual Indexes
 
 ```{r}
 names = names(df[, -c(1, ncol(df))])
