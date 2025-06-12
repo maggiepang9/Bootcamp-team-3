@@ -1,0 +1,10 @@
+plot_df = df %>%
+  select(c(GEOID, geometry,
+   dist_to_m_Recreation,dist_to_m_Parks_and_, TRACT_COUNT_Leaking_Un, TRACT_MEAN_ELEV)) %>%
+# %>% mutate(dist_to_m_Independen = (1 / (dist_to_m_Independen + 0.001)))
+   mutate(TRACT_COUNT_Leaking_Un = 1 -TRACT_COUNT_Leaking_Un, TRACT_MEAN_ELEV = 1 -TRACT_MEAN_ELEV) #Inverting the Index
+
+
+driver6= rowMeans(select(plot_df, c(dist_to_m_Recreation,dist_to_m_Parks_and_, TRACT_COUNT_Leaking_Un)))
+```
+cor(driver7, diabetes)
