@@ -1,0 +1,132 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(readr)
+library(sf)
+library(tmap)
+library(tigris)
+options(tigris_use_cache = TRUE)
+```
+
+```{r load-data}
+file_path <- "Final_Cleaned_Data.csv"
+df <- read_csv(file_path, show_col_type = F)
+```
+
+```{r}
+df_1 = df %>%
+  select(c(GEOID,
+    , m1_1_sch_1 , m1_2_qua_1, dist_to_m_Independen)) 
+
+driver_1 = rowMeans(select(df_1, c( m1_1_sch_1 , m1_2_qua_1)))
+```
+
+```{r}
+df_2 = df %>%
+  select(c(GEOID,
+    UNEMPPCT)) #Inverting the Index
+
+driver_2 = rowMeans(select(df_2, c(UNEMPPCT)))
+```
+
+```{r}
+df_3 = df %>%
+  select(c(GEOID,
+    LOWINCPCT)) #Inverting the Index
+
+driver_3 = rowMeans(select(df_3, c(LOWINCPCT)))
+```
+
+```{r}
+df_4 = df %>%
+  select(c(GEOID, 
+    TRACT_COUNT_Public_House))
+
+driver_4 = rowMeans(select(df_4, c(TRACT_COUNT_Public_House)))
+```
+
+```{r}
+df_5 = df %>%
+  select(c(GEOID, 
+    dist_to_m_Metro_Stat, dist_to_m_Metro_Bus_))
+
+driver_5 = rowMeans(select(df_5, c(dist_to_m_Metro_Stat, dist_to_m_Metro_Bus_)))
+
+```
+
+```{r}
+df_6 = df %>%
+  select(c(GEOID, 
+    TRACT_COUNT_Alcohol_Li, TRACT_COUNT_Food_Access, dist_to_m_Healthy_Co, dist_to_m_Grocery_St)) %>%
+    mutate(TRACT_COUNT_Food_Access = 1 -TRACT_COUNT_Food_Access, TRACT_COUNT_Alcohol_Li = 1 - TRACT_COUNT_Alcohol_Li) #Inverting the Index
+
+driver_6 = rowMeans(select(df_6, c(TRACT_COUNT_Alcohol_Li, TRACT_COUNT_Food_Access, dist_to_m_Healthy_Co, dist_to_m_Grocery_St)))
+```
+
+```{r}
+df_7 = df %>%
+  select(c(GEOID, 
+   dist_to_m_Primary_Ca, weighted_mean_percentile, TRACT_COUNT_Hospital)) %>%
+ mutate(TRACT_COUNT_Hospital = 1 - TRACT_COUNT_Hospital) %>%
+ mutate(weighted_mean_percentile = weighted_mean_percentile/100) #Inverting the Index
+
+driver_7 = rowMeans(select(df_7, c(dist_to_m_Primary_Ca, weighted_mean_percentile, TRACT_COUNT_Hospital)))
+```
+
+```{r}
+df_8 = df %>%
+  select(c(GEOID, 
+    dist_to_m_Parks_and_, dist_to_m_Recreation, dist_to_m_Leaking_Un, TRACT_MEAN_ELEV)) %>%
+    mutate(dist_to_m_Leaking_Un = 1 - dist_to_m_Leaking_Un, TRACT_MEAN_ELEV = 1 - TRACT_MEAN_ELEV) #Inverting the Index
+
+driver_8 = rowMeans(select(df_8, c(dist_to_m_Parks_and_, dist_to_m_Recreation, dist_to_m_Leaking_Un, TRACT_MEAN_ELEV)))
+```
+
+```{r}
+df_9 = df %>%
+  select(c(GEOID, 
+    dist_to_m_Police_Sta, percentile))
+
+driver_9 = rowMeans(select(df_9, c(dist_to_m_Police_Sta)))
+```
+
+```{r}
+df_drivers = df %>%
+  select(c(GEOID:CASTHMA)) %>%
+  add_column(driver_1 = driver_1, 
+             driver_2 = driver_2, 
+             driver_3 = driver_3, 
+             driver_4 = driver_4,
+             driver_5 = driver_5,
+             driver_6 = driver_6,
+             driver_7 = driver_7,
+             driver_8 = driver_8,
+             driver_9 = driver_9)
+head(df_drivers)
+```
+
+```{r}
+cor_mat = cor(df_drivers %>% select(-c(GEOID, TotalPopulation)))
+upper_tri = upper.tri(cor_mat)
+print(cor_mat)
+
+cor_df = as.data.frame(cor_mat) %>%
+  rownames_to_column("var1")%>%
+  pivot_longer(-var1, names_to = "var2", values_to = "cor")
+
+cor_plot = ggplot(cor_df, aes(x = var1, y = var2, fill = cor)) + 
+  geom_tile() + 
+  geom_text(aes(label = round(cor, 2)), size = 3) + 
+  scale_fill_gradient2(low = "skyblue", high = "firebrick", mid = "white", midpoint = 0, limit = c(-1, 1), name = "Correlation") +
+  theme_minimal() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  coord_fixed()
+
+print(cor_plot)
+
+ggsave("./Plots/Correlation_Plot", cor_plot)
+```
