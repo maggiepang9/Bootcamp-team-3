@@ -1,0 +1,186 @@
+---
+title: "DC EJSCREEN Data Analysis"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(readr)
+library(sf)
+library(tmap)
+library(tigris)
+options(tigris_use_cache = TRUE)
+```
+
+## Load and Prepare Data
+
+```{r load-data}
+file_path <- "ejiscreen_dc.csv"
+ejscreen_data <- read_csv(file_path)
+
+# Filter for DC and select relevant columns
+dc_data <- ejscreen_data %>%
+  filter(str_starts(ID, "11")) %>%
+  transmute(
+    GEOID = as.character(ID),
+    pct_low_income = percent_rank(LOWINCPCT), # percent_rank is for creating percentiles
+    asthma_index = percent_rank(P_DEMOGIDX_2),
+    unemployment_rate = percent_rank(UNEMPPCT),
+    driver = 0.7 * pct_low_income + 0.3 * unemployment_rate
+  )
+```
+
+## Spearman Correlation
+
+```{r correlation}
+dc_corr_matrix <- cor(
+  dc_data %>% select(-GEOID),
+  use = "pairwise.complete.obs",
+  method = "spearman"
+)
+
+print(round(dc_corr_matrix, 2))
+```
+
+## Join with Census Tract Geometry
+
+```{r join-geometry}
+dc_tracts <- tracts(state = "DC", year = 2020, class = "sf")
+dc_joined <- left_join(dc_tracts, dc_data, by = "GEOID")
+```
+
+## Missing Data Summary
+
+```{r missing-data}
+missing_summary <- dc_joined %>%
+  st_drop_geometry() %>%
+  summarise(
+    missing_asthma_index = sum(is.na(asthma_index)),
+    missing_low_income = sum(is.na(pct_low_income))
+  )
+
+print("Missing data summary:")
+print(missing_summary)
+```
+
+## Scatterplot: Asthma Index vs % Low Income
+
+```{r scatter-asthma-income}
+ggplot(dc_data, aes(x = pct_low_income, y = asthma_index)) +
+  geom_point(alpha = 0.6, color = "darkred") +
+  geom_smooth(method = "lm", se = FALSE, color = "black", linetype = "dashed") +
+  labs(
+    title = "Asthma Index vs. % Low Income",
+    x = "% Low Income",
+    y = "Asthma EJ Index"
+  ) +
+  theme_minimal()
+```
+
+## Set Static Mode for Mapping
+
+```{r tmap-mode}
+tmap_mode("plot")
+```
+
+## Map: Asthma EJ Index
+
+```{r map-asthma}
+map_asthma <- tm_shape(dc_joined) +
+  tm_polygons(
+    col = "asthma_index",
+    palette = "YlOrRd",
+    style = "quantile",
+    title = "Asthma EJ Index",
+    colorNA = "black",
+    textNA = "Missing Data",
+    border.alpha = 0.4,
+    lwd = 0.3
+  ) +
+  tm_layout(
+    title = "Asthma EJ Index in Washington, D.C.",
+    legend.outside = TRUE
+  )
+```
+
+## Map: Low-Income Population
+
+```{r map-low-income}
+map_low_income <- tm_shape(dc_joined) +
+  tm_polygons(
+    col = "pct_low_income",
+    palette = "YlGnBu",
+    style = "quantile",
+    title = "Low-Income Population (%)",
+    colorNA = "black",
+    textNA = "Missing Data",
+    border.alpha = 0.4,
+    lwd = 0.3
+  ) +
+  tm_layout(
+    title = "Low-Income Population in Washington, D.C.",
+    legend.outside = TRUE
+  )
+
+# Display side-by-side maps
+tmap_arrange(map_asthma, map_low_income, ncol = 2)
+```
+
+## Map: Unemployment Bubbles over Income Map
+
+```{r map-bubbles}
+dc_centroids <- dc_joined %>%
+  st_centroid(of_largest_polygon = TRUE) %>%
+  select(GEOID, unemployment_rate)
+
+tm_shape(dc_joined) +
+  tm_fill(
+    col = "pct_low_income",
+    palette = "YlOrRd",
+    title = "% Low Income"
+  ) +
+  tm_shape(dc_centroids) +
+  tm_symbols(
+    size = "unemployment_rate",
+    col = "blue",
+    border.col = "white",
+    title.size = "Unemployment Rate (%)"
+  ) +
+  tm_layout(
+    title = "DC Census Tracts: % Low Income (YlOrRd) and Unemployment (Blue Bubbles)",
+    legend.outside = TRUE
+  )
+```
+
+## Plot Driver
+
+```{r}
+ggplot(data = dc_joined) + 
+  geom_sf(aes(geometry = geometry, fill = driver)) + 
+  scale_fill_viridis_c() +
+  labs(title = "Driver Map")
+```
+
+```{r}
+eji_lm = lm(asthma_index ~ driver, data = dc_joined)
+eji_pred = predict(eji_lm)
+
+summary(eji_lm)
+
+dc_joined$res = eji_lm$residuals
+dc_joined$pred = eji_pred
+dc_joined$mse = (dc_joined$pred - dc_joined$asthma_index)^2
+
+ggplot(data = dc_joined) +
+  geom_sf(aes(geometry = geometry, fill = res)) + 
+  scale_fill_viridis_c() + 
+  labs(title = "Residuals")
+
+ggplot(data = dc_joined) +
+  geom_sf(aes(geometry = geometry, fill = mse)) + 
+  scale_fill_viridis_c() + 
+  labs(title = "MSE")
+```
+
